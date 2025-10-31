@@ -3,7 +3,8 @@ Title: Turkish Air Quality Data Access Tools
 Version: 0.1.0
 Date: 2025-10-27
 Authors@R:
-    person("Emrah", "Er", , "eer@eremrah.com", role = c("aut", "cre"))
+    person("Emrah", "Er", , "eer@eremrah.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-9909-7479"))
 Description: Provides functions to download and explore air quality monitoring
     data from the Turkish Ministry of Environment, Urbanization and Climate Change.
     Enables researchers to access hourly and daily measurements of PM10, PM2.5,

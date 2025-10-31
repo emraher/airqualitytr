@@ -2,6 +2,7 @@
 ** this is package ‘airqualitytr’ version ‘0.1.0’
 ** using staged installation
 ** R
+** inst
 ** byte-compile and prepare package for lazy loading
 ** help
 *** installing help indices

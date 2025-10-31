@@ -3,7 +3,8 @@ Title: Turkish Air Quality Data Access Tools
 Version: 0.1.0
 Date: 2025-10-27
 Authors@R: 
-    person("Emrah", "Er", , "eer@eremrah.com", role = c("aut", "cre"))
+    person("Emrah", "Er", , "eer@eremrah.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-9909-7479"))
 Description: Provides functions to download and explore air quality monitoring
     data from the Turkish Ministry of Environment, Urbanization and Climate Change.
     Enables researchers to access hourly and daily measurements of PM10, PM2.5,
@@ -23,7 +24,7 @@ Suggests: cli, future, furrr, ggplot2, glue, httptest, knitr,
 Config/testthat/edition: 3
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2025-10-31 22:21:19 UTC; emraher
-Author: Emrah Er [aut, cre]
+Packaged: 2025-10-31 22:31:56 UTC; emraher
+Author: Emrah Er [aut, cre] (ORCID: <https://orcid.org/0000-0001-9909-7479>)
 Maintainer: Emrah Er <eer@eremrah.com>
-Built: R 4.5.1; ; 2025-10-31 22:21:22 UTC; unix
+Built: R 4.5.1; ; 2025-10-31 22:32:30 UTC; unix

@@ -1,6 +1,18 @@
 pkgname <- "airqualitytr"
 source(file.path(R.home("share"), "R", "examples-header.R"))
 options(warn = 1)
+base::assign(".ExTimings", "airqualitytr-Ex.timings", pos = 'CheckExEnv')
+base::cat("name\tuser\tsystem\telapsed\n", file=base::get(".ExTimings", pos = 'CheckExEnv'))
+base::assign(".format_ptime",
+function(x) {
+  if(!is.na(x[4L])) x[1L] <- x[1L] + x[4L]
+  if(!is.na(x[5L])) x[2L] <- x[2L] + x[5L]
+  options(OutDec = '.')
+  format(x[1L:3L], digits = 7L)
+},
+pos = 'CheckExEnv')
+
+### * </HEADER>
 library('airqualitytr')
 
 base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
@@ -11,6 +23,7 @@ nameEx("assess_completeness")
 
 flush(stderr()); flush(stdout())
 
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: assess_completeness
 ### Title: Assess Data Completeness
 ### Aliases: assess_completeness
@@ -36,12 +49,15 @@ flush(stderr()); flush(stdout())
 
 
 
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("assess_completeness", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("check_invalid_values")
 ### * check_invalid_values
 
 flush(stderr()); flush(stdout())
 
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: check_invalid_values
 ### Title: Check for Invalid Values in Air Quality Data
 ### Aliases: check_invalid_values
@@ -65,12 +81,15 @@ flush(stderr()); flush(stdout())
 
 
 
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("check_invalid_values", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("get_api_status")
 ### * get_api_status
 
 flush(stderr()); flush(stdout())
 
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: get_api_status
 ### Title: Get API Status Information
 ### Aliases: get_api_status
@@ -84,12 +103,15 @@ flush(stderr()); flush(stdout())
 
 
 
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("get_api_status", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("identify_gaps")
 ### * identify_gaps
 
 flush(stderr()); flush(stdout())
 
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: identify_gaps
 ### Title: Identify Time Gaps in Air Quality Data
 ### Aliases: identify_gaps
@@ -112,12 +134,15 @@ flush(stderr()); flush(stdout())
 
 
 
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("identify_gaps", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("quality_report")
 ### * quality_report
 
 flush(stderr()); flush(stdout())
 
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: quality_report
 ### Title: Generate Data Quality Report
 ### Aliases: quality_report
@@ -148,12 +173,15 @@ flush(stderr()); flush(stdout())
 
 
 
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("quality_report", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("test_api_connection")
 ### * test_api_connection
 
 flush(stderr()); flush(stdout())
 
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: test_api_connection
 ### Title: Test API Connection
 ### Aliases: test_api_connection
@@ -175,6 +203,8 @@ flush(stderr()); flush(stdout())
 
 
 
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("test_api_connection", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 ### * <FOOTER>
 ###
 cleanEx()
