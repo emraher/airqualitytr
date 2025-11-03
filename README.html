@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+@font-face {
+font-family: octicons-link;
+src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format('woff');
+}
+body {
+-webkit-text-size-adjust: 100%;
+text-size-adjust: 100%;
+color: #333;
+font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+font-size: 16px;
+line-height: 1.6;
+word-wrap: break-word;
+}
+a {
+background-color: transparent;
+}
+a:active,
+a:hover {
+outline: 0;
+}
+strong {
+font-weight: bold;
+}
+h1 {
+font-size: 2em;
+margin: 0.67em 0;
+}
+img {
+border: 0;
+}
+hr {
+box-sizing: content-box;
+height: 0;
+}
+pre {
+overflow: auto;
+}
+code,
+kbd,
+pre {
+font-family: monospace, monospace;
+font-size: 1em;
+}
+input {
+color: inherit;
+font: inherit;
+margin: 0;
+}
+html input[disabled] {
+cursor: default;
+}
+input {
+line-height: normal;
+}
+input[type="checkbox"] {
+box-sizing: border-box;
+padding: 0;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+td,
+th {
+padding: 0;
+}
+* {
+box-sizing: border-box;
+}
+input {
+font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+a {
+color: #4078c0;
+text-decoration: none;
+}
+a:hover,
+a:active {
+text-decoration: underline;
+}
+hr {
+height: 0;
+margin: 15px 0;
+overflow: hidden;
+background: transparent;
+border: 0;
+border-bottom: 1px solid #ddd;
+}
+hr:before {
+display: table;
+content: "";
+}
+hr:after {
+display: table;
+clear: both;
+content: "";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 15px;
+margin-bottom: 15px;
+line-height: 1.1;
+}
+h1 {
+font-size: 30px;
+}
+h2 {
+font-size: 21px;
+}
+h3 {
+font-size: 16px;
+}
+h4 {
+font-size: 14px;
+}
+h5 {
+font-size: 12px;
+}
+h6 {
+font-size: 11px;
+}
+blockquote {
+margin: 0;
+}
+ul,
+ol {
+padding: 0;
+margin-top: 0;
+margin-bottom: 0;
+}
+ol ol,
+ul ol {
+list-style-type: lower-roman;
+}
+ul ul ol,
+ul ol ol,
+ol ul ol,
+ol ol ol {
+list-style-type: lower-alpha;
+}
+dd {
+margin-left: 0;
+}
+code {
+font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+font-size: 12px;
+}
+pre {
+margin-top: 0;
+margin-bottom: 0;
+font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+.select::-ms-expand {
+opacity: 0;
+}
+.octicon {
+font: normal normal normal 16px/1 octicons-link;
+display: inline-block;
+text-decoration: none;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+.octicon-link:before {
+content: '\f05c';
+}
+.markdown-body:before {
+display: table;
+content: "";
+}
+.markdown-body:after {
+display: table;
+clear: both;
+content: "";
+}
+.markdown-body>*:first-child {
+margin-top: 0 !important;
+}
+.markdown-body>*:last-child {
+margin-bottom: 0 !important;
+}
+a:not([href]) {
+color: inherit;
+text-decoration: none;
+}
+.anchor {
+display: inline-block;
+padding-right: 2px;
+margin-left: -18px;
+}
+.anchor:focus {
+outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 1em;
+margin-bottom: 16px;
+font-weight: bold;
+line-height: 1.4;
+}
+h1 .octicon-link,
+h2 .octicon-link,
+h3 .octicon-link,
+h4 .octicon-link,
+h5 .octicon-link,
+h6 .octicon-link {
+color: #000;
+vertical-align: middle;
+visibility: hidden;
+}
+h1:hover .anchor,
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor,
+h5:hover .anchor,
+h6:hover .anchor {
+text-decoration: none;
+}
+h1:hover .anchor .octicon-link,
+h2:hover .anchor .octicon-link,
+h3:hover .anchor .octicon-link,
+h4:hover .anchor .octicon-link,
+h5:hover .anchor .octicon-link,
+h6:hover .anchor .octicon-link {
+visibility: visible;
+}
+h1 {
+padding-bottom: 0.3em;
+font-size: 2.25em;
+line-height: 1.2;
+border-bottom: 1px solid #eee;
+}
+h1 .anchor {
+line-height: 1;
+}
+h2 {
+padding-bottom: 0.3em;
+font-size: 1.75em;
+line-height: 1.225;
+border-bottom: 1px solid #eee;
+}
+h2 .anchor {
+line-height: 1;
+}
+h3 {
+font-size: 1.5em;
+line-height: 1.43;
+}
+h3 .anchor {
+line-height: 1.2;
+}
+h4 {
+font-size: 1.25em;
+}
+h4 .anchor {
+line-height: 1.2;
+}
+h5 {
+font-size: 1em;
+}
+h5 .anchor {
+line-height: 1.1;
+}
+h6 {
+font-size: 1em;
+color: #777;
+}
+h6 .anchor {
+line-height: 1.1;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table,
+pre {
+margin-top: 0;
+margin-bottom: 16px;
+}
+hr {
+height: 4px;
+padding: 0;
+margin: 16px 0;
+background-color: #e7e7e7;
+border: 0 none;
+}
+ul,
+ol {
+padding-left: 2em;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+margin-top: 0;
+margin-bottom: 0;
+}
+li>p {
+margin-top: 16px;
+}
+dl {
+padding: 0;
+}
+dl dt {
+padding: 0;
+margin-top: 16px;
+font-size: 1em;
+font-style: italic;
+font-weight: bold;
+}
+dl dd {
+padding: 0 16px;
+margin-bottom: 16px;
+}
+blockquote {
+padding: 0 15px;
+color: #777;
+border-left: 4px solid #ddd;
+}
+blockquote>:first-child {
+margin-top: 0;
+}
+blockquote>:last-child {
+margin-bottom: 0;
+}
+table {
+display: block;
+width: 100%;
+overflow: auto;
+word-break: normal;
+word-break: keep-all;
+}
+table th {
+font-weight: bold;
+}
+table th,
+table td {
+padding: 6px 13px;
+border: 1px solid #ddd;
+}
+table tr {
+background-color: #fff;
+border-top: 1px solid #ccc;
+}
+table tr:nth-child(2n) {
+background-color: #f8f8f8;
+}
+img {
+max-width: 100%;
+box-sizing: content-box;
+background-color: #fff;
+}
+code {
+padding: 0;
+padding-top: 0.2em;
+padding-bottom: 0.2em;
+margin: 0;
+font-size: 85%;
+background-color: rgba(0,0,0,0.04);
+border-radius: 3px;
+}
+code:before,
+code:after {
+letter-spacing: -0.2em;
+content: "\00a0";
+}
+pre>code {
+padding: 0;
+margin: 0;
+font-size: 100%;
+word-break: normal;
+white-space: pre;
+background: transparent;
+border: 0;
+}
+.highlight {
+margin-bottom: 16px;
+}
+.highlight pre,
+pre {
+padding: 16px;
+overflow: auto;
+font-size: 85%;
+line-height: 1.45;
+background-color: #f7f7f7;
+border-radius: 3px;
+}
+.highlight pre {
+margin-bottom: 0;
+word-break: normal;
+}
+pre {
+word-wrap: normal;
+}
+pre code {
+display: inline;
+max-width: initial;
+padding: 0;
+margin: 0;
+overflow: initial;
+line-height: inherit;
+word-wrap: normal;
+background-color: transparent;
+border: 0;
+}
+pre code:before,
+pre code:after {
+content: normal;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font-size: 11px;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.pl-c {
+color: #969896;
+}
+.pl-c1,
+.pl-s .pl-v {
+color: #0086b3;
+}
+.pl-e,
+.pl-en {
+color: #795da3;
+}
+.pl-s .pl-s1,
+.pl-smi {
+color: #333;
+}
+.pl-ent {
+color: #63a35c;
+}
+.pl-k {
+color: #a71d5d;
+}
+.pl-pds,
+.pl-s,
+.pl-s .pl-pse .pl-s1,
+.pl-sr,
+.pl-sr .pl-cce,
+.pl-sr .pl-sra,
+.pl-sr .pl-sre {
+color: #183691;
+}
+.pl-v {
+color: #ed6a43;
+}
+.pl-id {
+color: #b52a1d;
+}
+.pl-ii {
+background-color: #b52a1d;
+color: #f8f8f8;
+}
+.pl-sr .pl-cce {
+color: #63a35c;
+font-weight: bold;
+}
+.pl-ml {
+color: #693a17;
+}
+.pl-mh,
+.pl-mh .pl-en,
+.pl-ms {
+color: #1d3e81;
+font-weight: bold;
+}
+.pl-mq {
+color: #008080;
+}
+.pl-mi {
+color: #333;
+font-style: italic;
+}
+.pl-mb {
+color: #333;
+font-weight: bold;
+}
+.pl-md {
+background-color: #ffecec;
+color: #bd2c00;
+}
+.pl-mi1 {
+background-color: #eaffea;
+color: #55a532;
+}
+.pl-mdr {
+color: #795da3;
+font-weight: bold;
+}
+.pl-mo {
+color: #1d3e81;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.task-list-item {
+list-style-type: none;
+}
+.task-list-item+.task-list-item {
+margin-top: 3px;
+}
+.task-list-item input {
+margin: 0 0.35em 0.25em -1.6em;
+vertical-align: middle;
+}
+:checked+.radio-label {
+z-index: 1;
+position: relative;
+border-color: #4078c0;
+}
+.sourceLine {
+display: inline-block;
+}
+code .kw { color: #000000; }
+code .dt { color: #ed6a43; }
+code .dv { color: #009999; }
+code .bn { color: #009999; }
+code .fl { color: #009999; }
+code .ch { color: #009999; }
+code .st { color: #183691; }
+code .co { color: #969896; }
+code .ot { color: #0086b3; }
+code .al { color: #a61717; }
+code .fu { color: #63a35c; }
+code .er { color: #a61717; background-color: #e3d2d2; }
+code .wa { color: #000000; }
+code .cn { color: #008080; }
+code .sc { color: #008080; }
+code .vs { color: #183691; }
+code .ss { color: #183691; }
+code .im { color: #000000; }
+code .va {color: #008080; }
+code .cf { color: #000000; }
+code .op { color: #000000; }
+code .bu { color: #000000; }
+code .ex { color: #000000; }
+code .pp { color: #999999; }
+code .at { color: #008080; }
+code .do { color: #969896; }
+code .an { color: #008080; }
+code .cv { color: #008080; }
+code .in { color: #008080; }
+</style>
+<style>
+body {
+box-sizing: border-box;
+min-width: 200px;
+max-width: 980px;
+margin: 0 auto;
+padding: 45px;
+padding-top: 0px;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+<h1 id="airqualitytr">airqualitytr</h1>
+<!-- badges: start -->
+
+<p><a href="https://CRAN.R-project.org/package=airqualitytr"><img role="img" aria-label="CRAN status" src="data:image/svg+xml; charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMzEiIGhlaWdodD0iMjAiIGFyaWEtbGFiZWw9IkNSQU4gbm90IHB1Ymxpc2hlZCI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJiIiB4Mj0iMCIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjYmJiIiBzdG9wLW9wYWNpdHk9Ii4xIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3Atb3BhY2l0eT0iLjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxtYXNrIGlkPSJhIj4KICAgIDxyZWN0IHdpZHRoPSIxMzEiIGhlaWdodD0iMjAiIHJ4PSIzIiBmaWxsPSIjZmZmIi8+CiAgPC9tYXNrPgogIDxnIG1hc2s9InVybCgjYSkiPgogICAgPHBhdGggZmlsbD0iIzU1NSIgZD0iTTAgMGg0M3YyMEgweiIvPgogICAgPHBhdGggZmlsbD0iI2UwNWQ0NCIgZD0iTTQzIDBoMTE0djIwSDQzeiIvPgogICAgPHBhdGggZmlsbD0idXJsKCNiKSIgZD0iTTAgMGgxMzF2MjBIMHoiLz4KICA8L2c+CiAgPGcgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIKICAgICBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsVmVyZGFuYSxHZW5ldmEsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSI+CiAgICA8dGV4dCB4PSIyMS41IiB5PSIxNSIgZmlsbD0iIzAxMDEwMSIgZmlsbC1vcGFjaXR5PSIuMyI+CiAgICAgIENSQU4KICAgIDwvdGV4dD4KICAgIDx0ZXh0IHg9IjIxLjUiIHk9IjE0Ij4KICAgICAgQ1JBTgogICAgPC90ZXh0PgogICAgPHRleHQgeD0iODYiIHk9IjE1IiBmaWxsPSIjMDEwMTAxIiBmaWxsLW9wYWNpdHk9Ii4zIj4KICAgICAgbm90IHB1Ymxpc2hlZAogICAgPC90ZXh0PgogICAgPHRleHQgeD0iODYiIHk9IjE0Ij4KICAgICAgbm90IHB1Ymxpc2hlZAogICAgPC90ZXh0PgogIDwvZz4KPC9zdmc+" alt="CRAN status" /></a> <a href="https://github.com/emraher/airqualitytr/actions/workflows/R-CMD-check.yaml"><img role="img" aria-label="R-CMD-check" src="https://github.com/emraher/airqualitytr/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check" /></a></p>
+<!-- badges: end -->
+
+<p><strong>airqualitytr</strong> is an R package that provides an
+interface to download and explore air quality data from the Turkish
+Ministry of Environment, Urbanization and Climate Change. It allows
+users to:</p>
+<ul>
+<li>Download time series air quality data for a specified station and
+parameters.</li>
+<li>Retrieve the lists of available cities.</li>
+<li>Retrieve station metadata.</li>
+<li>Retrieve available measurement parameters.</li>
+</ul>
+<p>These functions enable researchers and analysts to quickly access and
+analyze environmental data in their R workflow.</p>
+<p><strong>Note:</strong> This package was initially created by Emrah
+Er, with subsequent improvements made using <a href="https://claude.com/claude-code">Claude Code</a>.</p>
+<h2 id="installation">Installation</h2>
+<p>You can install the development version from GitHub using the
+<strong>pak</strong> package:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="st">&quot;emraher/airqualitytr&quot;</span>)</span></code></pre></div>
+<h2 id="usage">Usage</h2>
+<p>Load the package and explore the available options:</p>
+<h3 id="list-available-cities">List Available Cities</h3>
+<p>Retrieve a tibble of cities available for filtering:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">library</span>(airqualitytr)</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="co">#&gt; Attaching package: &#39;dplyr&#39;</span></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="co">#&gt; The following objects are masked from &#39;package:stats&#39;:</span></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="co">#&gt;     filter, lag</span></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a><span class="co">#&gt; The following objects are masked from &#39;package:base&#39;:</span></span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a><span class="co">#&gt;     intersect, setdiff, setequal, union</span></span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a>(cities <span class="ot">&lt;-</span> <span class="fu">list_cities</span>())</span>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a><span class="co">#&gt; # A tibble: 81 × 2</span></span>
+<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a><span class="co">#&gt;    city_id                              city_name     </span></span>
+<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a><span class="co">#&gt;    &lt;chr&gt;                                &lt;chr&gt;         </span></span>
+<span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a><span class="co">#&gt;  1 fddbbf7e-b853-431e-89d3-3522264e9383 Adana         </span></span>
+<span id="cb2-17"><a href="#cb2-17" tabindex="-1"></a><span class="co">#&gt;  2 50cd2278-5573-4069-b7a9-2aacaf11431a Adıyaman      </span></span>
+<span id="cb2-18"><a href="#cb2-18" tabindex="-1"></a><span class="co">#&gt;  3 c9b19ecd-1ffc-4616-ab1a-790aaf539bfe Afyonkarahisar</span></span>
+<span id="cb2-19"><a href="#cb2-19" tabindex="-1"></a><span class="co">#&gt;  4 12b12d2f-1fd1-41a5-9142-7fe31e5134e3 Ağrı          </span></span>
+<span id="cb2-20"><a href="#cb2-20" tabindex="-1"></a><span class="co">#&gt;  5 0d977726-b21e-4ef8-b852-e659286f1778 Aksaray       </span></span>
+<span id="cb2-21"><a href="#cb2-21" tabindex="-1"></a><span class="co">#&gt;  6 b1bd61cf-1528-4a3e-9b45-c30cbf223035 Amasya        </span></span>
+<span id="cb2-22"><a href="#cb2-22" tabindex="-1"></a><span class="co">#&gt;  7 8dbbe10c-b2c5-44c1-bb3e-90be45aee744 Ankara        </span></span>
+<span id="cb2-23"><a href="#cb2-23" tabindex="-1"></a><span class="co">#&gt;  8 c414e607-cb0f-4226-997c-62a9eb563b2b Antalya       </span></span>
+<span id="cb2-24"><a href="#cb2-24" tabindex="-1"></a><span class="co">#&gt;  9 d40a8bdb-1402-43e6-9e92-1f1c8484632c Ardahan       </span></span>
+<span id="cb2-25"><a href="#cb2-25" tabindex="-1"></a><span class="co">#&gt; 10 a0da922a-ff51-4e7d-9f75-7fe44217d725 Artvin        </span></span>
+<span id="cb2-26"><a href="#cb2-26" tabindex="-1"></a><span class="co">#&gt; # ℹ 71 more rows</span></span></code></pre></div>
+<h3 id="list-available-stations">List Available Stations</h3>
+<p>Get metadata for all available stations:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>stations <span class="ot">&lt;-</span> <span class="fu">list_stations</span>()</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="fu">head</span>(stations)</span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="co">#&gt; # A tibble: 6 × 20</span></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="co">#&gt;   station_id    station_name city_id city_name town_id location station_sub_type</span></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;         &lt;chr&gt;        &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt;   &lt;chr&gt;               &lt;int&gt;</span></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="co">#&gt; 1 468478b7-ace… Adana - Çat… fddbbf… Adana     f23102… POINT (…                1</span></span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a><span class="co">#&gt; 2 9a381f61-657… Adana - Çuk… fddbbf… Adana     f2c0da… POINT (…               23</span></span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a><span class="co">#&gt; 3 bdc1f3d0-004… Adana - Doğ… fddbbf… Adana     fb3596… POINT (…                1</span></span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a><span class="co">#&gt; 4 c31a108f-90b… Adana - Met… fddbbf… Adana     fb3596… POINT (…                1</span></span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a><span class="co">#&gt; 5 c75060c5-d28… Adana - Val… fddbbf… Adana     f2c0da… POINT (…                1</span></span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a><span class="co">#&gt; 6 2b79754a-c5f… Adana-Seyhan fddbbf… Adana     f2c0da… POINT (…               23</span></span>
+<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a><span class="co">#&gt; # ℹ 13 more variables: company_id &lt;chr&gt;, company_id_name &lt;chr&gt;,</span></span>
+<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a><span class="co">#&gt; #   station_group &lt;int&gt;, station_group_name &lt;chr&gt;, sector_code &lt;int&gt;,</span></span>
+<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a><span class="co">#&gt; #   sector_code_name &lt;chr&gt;, basin_id &lt;lgl&gt;, data_periods &lt;int&gt;,</span></span>
+<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a><span class="co">#&gt; #   source_type &lt;int&gt;, source_type_name &lt;chr&gt;, area_type &lt;int&gt;,</span></span>
+<span id="cb3-16"><a href="#cb3-16" tabindex="-1"></a><span class="co">#&gt; #   area_type_name &lt;chr&gt;, is_portable &lt;lgl&gt;</span></span></code></pre></div>
+<h3 id="list-available-measurement-parameters">List Available
+Measurement Parameters</h3>
+<p>Retrieve a tibble of available measurement parameters (e.g., PM10,
+CO, NO2):</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>(params <span class="ot">&lt;-</span> <span class="fu">list_parameters</span>())</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="co">#&gt; # A tibble: 8 × 2</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="co">#&gt;   id    name  </span></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt; &lt;chr&gt; </span></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="co">#&gt; 1 PM10  PM10  </span></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a><span class="co">#&gt; 2 PM25  PM 2.5</span></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a><span class="co">#&gt; 3 SO2   SO2   </span></span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a><span class="co">#&gt; 4 CO    CO    </span></span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a><span class="co">#&gt; 5 NO2   NO2   </span></span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a><span class="co">#&gt; 6 NOX   NOX   </span></span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a><span class="co">#&gt; 7 NO    NO    </span></span>
+<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a><span class="co">#&gt; 8 O3    O3</span></span></code></pre></div>
+<h3 id="download-air-quality-data">Download Air Quality Data</h3>
+<p>Download time series air quality data for a specific station. You
+must provide the station’s unique identifier, select one or more
+measurement parameters, specify a date range, and choose the data
+frequency (hourly or daily).</p>
+<p>Here is an example:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="co"># Example inputs:</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>station_id <span class="ot">&lt;-</span> <span class="st">&quot;468478b7-ace5-4bd3-b89a-a9c1c2e53080&quot;</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>parameters <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;PM10&quot;</span>, <span class="st">&quot;CO&quot;</span>, <span class="st">&quot;NO2&quot;</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>start_datetime <span class="ot">&lt;-</span> <span class="st">&quot;2025-03-16 00:00&quot;</span></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>end_datetime <span class="ot">&lt;-</span> <span class="st">&quot;2025-04-15 00:00&quot;</span></span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>frequency <span class="ot">&lt;-</span> <span class="st">&quot;hourly&quot;</span></span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">download_air_quality_data</span>(</span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a>  <span class="at">station_id =</span> station_id,</span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a>  <span class="at">parameters =</span> parameters,</span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a>  <span class="at">start_datetime =</span> start_datetime,</span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a>  <span class="at">end_datetime =</span> end_datetime,</span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a>  <span class="at">frequency =</span> frequency</span>
+<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a>)</span>
+<span id="cb5-15"><a href="#cb5-15" tabindex="-1"></a><span class="fu">head</span>(data)</span>
+<span id="cb5-16"><a href="#cb5-16" tabindex="-1"></a><span class="co">#&gt; # A tibble: 6 × 23</span></span>
+<span id="cb5-17"><a href="#cb5-17" tabindex="-1"></a><span class="co">#&gt;   time                station_id station_name city_id city_name town_id location</span></span>
+<span id="cb5-18"><a href="#cb5-18" tabindex="-1"></a><span class="co">#&gt;   &lt;dttm&gt;              &lt;chr&gt;      &lt;chr&gt;        &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt;   &lt;chr&gt;   </span></span>
+<span id="cb5-19"><a href="#cb5-19" tabindex="-1"></a><span class="co">#&gt; 1 2025-03-16 00:00:00 468478b7-… Adana - Çat… fddbbf… Adana     f23102… POINT (…</span></span>
+<span id="cb5-20"><a href="#cb5-20" tabindex="-1"></a><span class="co">#&gt; 2 2025-03-16 00:00:00 468478b7-… Adana - Çat… fddbbf… Adana     f23102… POINT (…</span></span>
+<span id="cb5-21"><a href="#cb5-21" tabindex="-1"></a><span class="co">#&gt; 3 2025-03-16 00:00:00 468478b7-… Adana - Çat… fddbbf… Adana     f23102… POINT (…</span></span>
+<span id="cb5-22"><a href="#cb5-22" tabindex="-1"></a><span class="co">#&gt; 4 2025-03-16 01:00:00 468478b7-… Adana - Çat… fddbbf… Adana     f23102… POINT (…</span></span>
+<span id="cb5-23"><a href="#cb5-23" tabindex="-1"></a><span class="co">#&gt; 5 2025-03-16 01:00:00 468478b7-… Adana - Çat… fddbbf… Adana     f23102… POINT (…</span></span>
+<span id="cb5-24"><a href="#cb5-24" tabindex="-1"></a><span class="co">#&gt; 6 2025-03-16 01:00:00 468478b7-… Adana - Çat… fddbbf… Adana     f23102… POINT (…</span></span>
+<span id="cb5-25"><a href="#cb5-25" tabindex="-1"></a><span class="co">#&gt; # ℹ 16 more variables: station_sub_type &lt;int&gt;, company_id &lt;chr&gt;,</span></span>
+<span id="cb5-26"><a href="#cb5-26" tabindex="-1"></a><span class="co">#&gt; #   company_id_name &lt;chr&gt;, station_group &lt;int&gt;, station_group_name &lt;chr&gt;,</span></span>
+<span id="cb5-27"><a href="#cb5-27" tabindex="-1"></a><span class="co">#&gt; #   sector_code &lt;int&gt;, sector_code_name &lt;chr&gt;, basin_id &lt;lgl&gt;,</span></span>
+<span id="cb5-28"><a href="#cb5-28" tabindex="-1"></a><span class="co">#&gt; #   data_periods &lt;int&gt;, source_type &lt;int&gt;, source_type_name &lt;chr&gt;,</span></span>
+<span id="cb5-29"><a href="#cb5-29" tabindex="-1"></a><span class="co">#&gt; #   area_type &lt;int&gt;, area_type_name &lt;chr&gt;, is_portable &lt;lgl&gt;, parameter &lt;chr&gt;,</span></span>
+<span id="cb5-30"><a href="#cb5-30" tabindex="-1"></a><span class="co">#&gt; #   value &lt;dbl&gt;</span></span></code></pre></div>
+<p>The resulting tibble contains:</p>
+<ul>
+<li><strong>time:</strong> POSIXct timestamp of the measurement.</li>
+<li><strong>station_id:</strong> Station identifier from the API
+response.</li>
+<li><strong>city_name:</strong> The city name provided.</li>
+<li><strong>station_name:</strong> The station name provided.</li>
+<li><strong>parameter:</strong> The measurement parameter (e.g.,
+“PM10”).</li>
+<li><strong>value:</strong> The corresponding measurement value.</li>
+</ul>
+<h3 id="bulk-download">Bulk Download</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="co"># Define the date range and parameters</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>start_datetime <span class="ot">&lt;-</span> <span class="st">&quot;2025-03-16 00:00&quot;</span></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>end_datetime <span class="ot">&lt;-</span> <span class="st">&quot;2025-03-16 01:00&quot;</span> <span class="co"># using a short interval for testing</span></span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>parameters <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;PM10&quot;</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>frequency <span class="ot">&lt;-</span> <span class="st">&quot;hourly&quot;</span></span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a><span class="co"># Bulk download air quality data for all stations</span></span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a>bulk_data <span class="ot">&lt;-</span> <span class="fu">bulk_download_air_quality_data</span>(</span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a>  <span class="at">start_datetime =</span> start_datetime,</span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a>  <span class="at">end_datetime =</span> end_datetime,</span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a>  <span class="at">parameters =</span> parameters,</span>
+<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a>  <span class="at">frequency =</span> frequency</span>
+<span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a>)</span>
+<span id="cb6-14"><a href="#cb6-14" tabindex="-1"></a></span>
+<span id="cb6-15"><a href="#cb6-15" tabindex="-1"></a><span class="co"># Inspect the combined data</span></span>
+<span id="cb6-16"><a href="#cb6-16" tabindex="-1"></a><span class="fu">glimpse</span>(bulk_data)</span></code></pre></div>
+<h3 id="parallel-bulk-downloads">Parallel Bulk Downloads</h3>
+<p>For faster bulk downloads, you can use parallel processing. This is
+especially useful when downloading data from many stations or large date
+ranges:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="co"># Install parallel processing packages if not already installed</span></span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="co"># install.packages(c(&quot;future&quot;, &quot;furrr&quot;, &quot;progressr&quot;))</span></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="fu">library</span>(future)</span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="fu">library</span>(progressr)</span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a><span class="co"># Set up parallel processing with 4 workers</span></span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a><span class="fu">plan</span>(multisession, <span class="at">workers =</span> <span class="dv">4</span>)</span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a><span class="co"># Bulk download with parallel processing</span></span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a>start_datetime <span class="ot">&lt;-</span> <span class="st">&quot;2025-03-16 00:00&quot;</span></span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a>end_datetime <span class="ot">&lt;-</span> <span class="st">&quot;2025-03-16 01:00&quot;</span></span>
+<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a>parameters <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;PM10&quot;</span>, <span class="st">&quot;NO2&quot;</span>)</span>
+<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a>frequency <span class="ot">&lt;-</span> <span class="st">&quot;hourly&quot;</span></span>
+<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a></span>
+<span id="cb7-16"><a href="#cb7-16" tabindex="-1"></a><span class="co"># Option 1: Let the function manage the parallel plan</span></span>
+<span id="cb7-17"><a href="#cb7-17" tabindex="-1"></a>bulk_data <span class="ot">&lt;-</span> <span class="fu">bulk_download_air_quality_data</span>(</span>
+<span id="cb7-18"><a href="#cb7-18" tabindex="-1"></a>  <span class="at">start_datetime =</span> start_datetime,</span>
+<span id="cb7-19"><a href="#cb7-19" tabindex="-1"></a>  <span class="at">end_datetime =</span> end_datetime,</span>
+<span id="cb7-20"><a href="#cb7-20" tabindex="-1"></a>  <span class="at">parameters =</span> parameters,</span>
+<span id="cb7-21"><a href="#cb7-21" tabindex="-1"></a>  <span class="at">frequency =</span> frequency,</span>
+<span id="cb7-22"><a href="#cb7-22" tabindex="-1"></a>  <span class="at">parallel =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb7-23"><a href="#cb7-23" tabindex="-1"></a>  <span class="at">workers =</span> <span class="dv">4</span> <span class="co"># Number of parallel workers</span></span>
+<span id="cb7-24"><a href="#cb7-24" tabindex="-1"></a>)</span>
+<span id="cb7-25"><a href="#cb7-25" tabindex="-1"></a></span>
+<span id="cb7-26"><a href="#cb7-26" tabindex="-1"></a><span class="co"># Option 2: Set up your own future plan</span></span>
+<span id="cb7-27"><a href="#cb7-27" tabindex="-1"></a><span class="fu">plan</span>(multisession, <span class="at">workers =</span> <span class="dv">4</span>)</span>
+<span id="cb7-28"><a href="#cb7-28" tabindex="-1"></a>bulk_data <span class="ot">&lt;-</span> <span class="fu">bulk_download_air_quality_data</span>(</span>
+<span id="cb7-29"><a href="#cb7-29" tabindex="-1"></a>  <span class="at">start_datetime =</span> start_datetime,</span>
+<span id="cb7-30"><a href="#cb7-30" tabindex="-1"></a>  <span class="at">end_datetime =</span> end_datetime,</span>
+<span id="cb7-31"><a href="#cb7-31" tabindex="-1"></a>  <span class="at">parameters =</span> parameters,</span>
+<span id="cb7-32"><a href="#cb7-32" tabindex="-1"></a>  <span class="at">frequency =</span> frequency,</span>
+<span id="cb7-33"><a href="#cb7-33" tabindex="-1"></a>  <span class="at">parallel =</span> <span class="cn">TRUE</span> <span class="co"># Uses your existing plan</span></span>
+<span id="cb7-34"><a href="#cb7-34" tabindex="-1"></a>)</span>
+<span id="cb7-35"><a href="#cb7-35" tabindex="-1"></a><span class="fu">plan</span>(sequential) <span class="co"># Reset to sequential processing</span></span>
+<span id="cb7-36"><a href="#cb7-36" tabindex="-1"></a></span>
+<span id="cb7-37"><a href="#cb7-37" tabindex="-1"></a><span class="co"># With progress tracking (requires progressr package)</span></span>
+<span id="cb7-38"><a href="#cb7-38" tabindex="-1"></a><span class="fu">handlers</span>(<span class="at">global =</span> <span class="cn">TRUE</span>) <span class="co"># Enable progress handlers</span></span>
+<span id="cb7-39"><a href="#cb7-39" tabindex="-1"></a><span class="fu">handlers</span>(<span class="st">&quot;progress&quot;</span>) <span class="co"># Use progress bar</span></span>
+<span id="cb7-40"><a href="#cb7-40" tabindex="-1"></a></span>
+<span id="cb7-41"><a href="#cb7-41" tabindex="-1"></a><span class="fu">with_progress</span>({</span>
+<span id="cb7-42"><a href="#cb7-42" tabindex="-1"></a>  bulk_data <span class="ot">&lt;-</span> <span class="fu">bulk_download_air_quality_data</span>(</span>
+<span id="cb7-43"><a href="#cb7-43" tabindex="-1"></a>    <span class="at">start_datetime =</span> start_datetime,</span>
+<span id="cb7-44"><a href="#cb7-44" tabindex="-1"></a>    <span class="at">end_datetime =</span> end_datetime,</span>
+<span id="cb7-45"><a href="#cb7-45" tabindex="-1"></a>    <span class="at">parameters =</span> parameters,</span>
+<span id="cb7-46"><a href="#cb7-46" tabindex="-1"></a>    <span class="at">frequency =</span> frequency,</span>
+<span id="cb7-47"><a href="#cb7-47" tabindex="-1"></a>    <span class="at">parallel =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb7-48"><a href="#cb7-48" tabindex="-1"></a>    <span class="at">workers =</span> <span class="dv">4</span>,</span>
+<span id="cb7-49"><a href="#cb7-49" tabindex="-1"></a>    <span class="at">show_progress =</span> <span class="cn">TRUE</span></span>
+<span id="cb7-50"><a href="#cb7-50" tabindex="-1"></a>  )</span>
+<span id="cb7-51"><a href="#cb7-51" tabindex="-1"></a>})</span>
+<span id="cb7-52"><a href="#cb7-52" tabindex="-1"></a></span>
+<span id="cb7-53"><a href="#cb7-53" tabindex="-1"></a><span class="fu">glimpse</span>(bulk_data)</span></code></pre></div>
+<p>You can also use parallel processing for downloading all data from a
+single station:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>station_id <span class="ot">&lt;-</span> <span class="st">&quot;468478b7-ace5-4bd3-b89a-a9c1c2e53080&quot;</span></span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>parameters <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;PM10&quot;</span>, <span class="st">&quot;CO&quot;</span>, <span class="st">&quot;NO2&quot;</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a><span class="co"># Download all available data in parallel (parallelizes across time chunks)</span></span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a><span class="fu">plan</span>(multisession, <span class="at">workers =</span> <span class="dv">4</span>)</span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a>all_data <span class="ot">&lt;-</span> <span class="fu">download_all_data_for_station</span>(</span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a>  <span class="at">station_id =</span> station_id,</span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a>  <span class="at">parameters =</span> parameters,</span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a>  <span class="at">frequency =</span> <span class="st">&quot;hourly&quot;</span>,</span>
+<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a>  <span class="at">chunk_size =</span> <span class="st">&quot;3 months&quot;</span>, <span class="co"># Smaller chunks = more parallelization</span></span>
+<span id="cb8-11"><a href="#cb8-11" tabindex="-1"></a>  <span class="at">parallel =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb8-12"><a href="#cb8-12" tabindex="-1"></a>  <span class="at">workers =</span> <span class="dv">4</span></span>
+<span id="cb8-13"><a href="#cb8-13" tabindex="-1"></a>)</span>
+<span id="cb8-14"><a href="#cb8-14" tabindex="-1"></a><span class="fu">plan</span>(sequential)</span>
+<span id="cb8-15"><a href="#cb8-15" tabindex="-1"></a></span>
+<span id="cb8-16"><a href="#cb8-16" tabindex="-1"></a><span class="fu">glimpse</span>(all_data)</span></code></pre></div>
+<h3 id="bulk-download-2">Bulk Download 2</h3>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>station_id <span class="ot">&lt;-</span> <span class="st">&quot;468478b7-ace5-4bd3-b89a-a9c1c2e53080&quot;</span></span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>parameters <span class="ot">&lt;-</span> params<span class="sc">$</span>name</span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>frequency <span class="ot">&lt;-</span> <span class="st">&quot;hourly&quot;</span></span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a><span class="co"># Download all available data for the specified station over the broad default range</span></span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a>all_data <span class="ot">&lt;-</span> <span class="fu">download_all_data_for_station</span>(</span>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a>  <span class="at">station_id =</span> station_id,</span>
+<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a>  <span class="at">parameters =</span> parameters,</span>
+<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a>  <span class="at">frequency =</span> frequency</span>
+<span id="cb9-10"><a href="#cb9-10" tabindex="-1"></a>)</span>
+<span id="cb9-11"><a href="#cb9-11" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" tabindex="-1"></a><span class="fu">glimpse</span>(all_data)</span></code></pre></div>
+<h3 id="bulk-download-3---save-all-station-data-to-parquet-files">Bulk
+Download 3 - Save All Station Data to Parquet Files</h3>
+<p>For very large bulk downloads, you can process each station
+sequentially or use parallel processing with <code>furrr</code>:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a><span class="fu">library</span>(arrow)</span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a><span class="fu">library</span>(future)</span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a><span class="fu">library</span>(furrr)</span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a><span class="fu">library</span>(airqualitytr)</span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a><span class="co"># Define the parameters to download.</span></span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a>params <span class="ot">&lt;-</span> <span class="fu">list_parameters</span>()</span>
+<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a>parameters <span class="ot">&lt;-</span> params<span class="sc">$</span>name <span class="co"># or simply: c(&quot;PM10&quot;, &quot;CO&quot;, &quot;NO2&quot;)</span></span>
+<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a><span class="co"># Retrieve station metadata from your package</span></span>
+<span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a>stations_meta <span class="ot">&lt;-</span> <span class="fu">list_stations</span>()</span>
+<span id="cb10-13"><a href="#cb10-13" tabindex="-1"></a></span>
+<span id="cb10-14"><a href="#cb10-14" tabindex="-1"></a><span class="co"># Join city names (already included in list_stations() output)</span></span>
+<span id="cb10-15"><a href="#cb10-15" tabindex="-1"></a>cities_meta <span class="ot">&lt;-</span> <span class="fu">list_cities</span>()</span>
+<span id="cb10-16"><a href="#cb10-16" tabindex="-1"></a>stations_meta <span class="ot">&lt;-</span> stations_meta <span class="sc">|&gt;</span></span>
+<span id="cb10-17"><a href="#cb10-17" tabindex="-1"></a>  <span class="fu">left_join</span>(cities_meta, <span class="at">by =</span> <span class="st">&quot;city_id&quot;</span>)</span>
+<span id="cb10-18"><a href="#cb10-18" tabindex="-1"></a></span>
+<span id="cb10-19"><a href="#cb10-19" tabindex="-1"></a><span class="co"># Define frequency for downloading data.</span></span>
+<span id="cb10-20"><a href="#cb10-20" tabindex="-1"></a>frequency <span class="ot">&lt;-</span> <span class="st">&quot;hourly&quot;</span> <span class="co"># or &quot;daily&quot;</span></span>
+<span id="cb10-21"><a href="#cb10-21" tabindex="-1"></a></span>
+<span id="cb10-22"><a href="#cb10-22" tabindex="-1"></a><span class="co"># Create an output folder to store Parquet files</span></span>
+<span id="cb10-23"><a href="#cb10-23" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(<span class="st">&quot;bulk_station_data&quot;</span>)) {</span>
+<span id="cb10-24"><a href="#cb10-24" tabindex="-1"></a>  <span class="fu">dir.create</span>(<span class="st">&quot;bulk_station_data&quot;</span>)</span>
+<span id="cb10-25"><a href="#cb10-25" tabindex="-1"></a>}</span>
+<span id="cb10-26"><a href="#cb10-26" tabindex="-1"></a></span>
+<span id="cb10-27"><a href="#cb10-27" tabindex="-1"></a><span class="co"># Option 1: Sequential processing (original method)</span></span>
+<span id="cb10-28"><a href="#cb10-28" tabindex="-1"></a><span class="fu">pwalk</span>(</span>
+<span id="cb10-29"><a href="#cb10-29" tabindex="-1"></a>  <span class="fu">list</span>(</span>
+<span id="cb10-30"><a href="#cb10-30" tabindex="-1"></a>    <span class="at">station_id =</span> stations_meta<span class="sc">$</span>station_id,</span>
+<span id="cb10-31"><a href="#cb10-31" tabindex="-1"></a>    <span class="at">station_name =</span> stations_meta<span class="sc">$</span>station_name,</span>
+<span id="cb10-32"><a href="#cb10-32" tabindex="-1"></a>    <span class="at">city_name =</span> stations_meta<span class="sc">$</span>city_name</span>
+<span id="cb10-33"><a href="#cb10-33" tabindex="-1"></a>  ),</span>
+<span id="cb10-34"><a href="#cb10-34" tabindex="-1"></a>  <span class="cf">function</span>(station_id, station_name, city_name) {</span>
+<span id="cb10-35"><a href="#cb10-35" tabindex="-1"></a>    <span class="fu">message</span>(<span class="st">&quot;Downloading data for station: &quot;</span>, station_name, <span class="st">&quot; (&quot;</span>, station_id, <span class="st">&quot;)&quot;</span>)</span>
+<span id="cb10-36"><a href="#cb10-36" tabindex="-1"></a></span>
+<span id="cb10-37"><a href="#cb10-37" tabindex="-1"></a>    <span class="co"># Call download_all_data_for_station() with only the essential inputs.</span></span>
+<span id="cb10-38"><a href="#cb10-38" tabindex="-1"></a>    <span class="co"># This function automatically uses a broad date range (e.g. 1900-01-01 to 2099-12-31)</span></span>
+<span id="cb10-39"><a href="#cb10-39" tabindex="-1"></a>    <span class="co"># to fetch all available data for that station.</span></span>
+<span id="cb10-40"><a href="#cb10-40" tabindex="-1"></a>    station_data <span class="ot">&lt;-</span> <span class="fu">download_all_data_for_station</span>(</span>
+<span id="cb10-41"><a href="#cb10-41" tabindex="-1"></a>      <span class="at">station_id =</span> station_id,</span>
+<span id="cb10-42"><a href="#cb10-42" tabindex="-1"></a>      <span class="at">parameters =</span> parameters,</span>
+<span id="cb10-43"><a href="#cb10-43" tabindex="-1"></a>      <span class="at">frequency =</span> frequency</span>
+<span id="cb10-44"><a href="#cb10-44" tabindex="-1"></a>    )</span>
+<span id="cb10-45"><a href="#cb10-45" tabindex="-1"></a></span>
+<span id="cb10-46"><a href="#cb10-46" tabindex="-1"></a>    <span class="co"># Optionally, if station_data might be huge, you can periodically flush memory or</span></span>
+<span id="cb10-47"><a href="#cb10-47" tabindex="-1"></a>    <span class="co"># simply write the result directly.</span></span>
+<span id="cb10-48"><a href="#cb10-48" tabindex="-1"></a>    file_name <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="st">&quot;bulk_station_data&quot;</span>, <span class="fu">paste0</span>(<span class="st">&quot;data_&quot;</span>, station_id, <span class="st">&quot;.parquet&quot;</span>))</span>
+<span id="cb10-49"><a href="#cb10-49" tabindex="-1"></a>    arrow<span class="sc">::</span><span class="fu">write_parquet</span>(station_data, <span class="at">sink =</span> file_name, <span class="at">compression =</span> <span class="st">&quot;snappy&quot;</span>)</span>
+<span id="cb10-50"><a href="#cb10-50" tabindex="-1"></a></span>
+<span id="cb10-51"><a href="#cb10-51" tabindex="-1"></a>    <span class="fu">message</span>(<span class="st">&quot;Saved data to: &quot;</span>, file_name)</span>
+<span id="cb10-52"><a href="#cb10-52" tabindex="-1"></a>  }</span>
+<span id="cb10-53"><a href="#cb10-53" tabindex="-1"></a>)</span>
+<span id="cb10-54"><a href="#cb10-54" tabindex="-1"></a></span>
+<span id="cb10-55"><a href="#cb10-55" tabindex="-1"></a><span class="co"># Option 2: Parallel processing with furrr (much faster!)</span></span>
+<span id="cb10-56"><a href="#cb10-56" tabindex="-1"></a><span class="fu">plan</span>(multisession, <span class="at">workers =</span> <span class="dv">4</span>)</span>
+<span id="cb10-57"><a href="#cb10-57" tabindex="-1"></a></span>
+<span id="cb10-58"><a href="#cb10-58" tabindex="-1"></a><span class="fu">future_pwalk</span>(</span>
+<span id="cb10-59"><a href="#cb10-59" tabindex="-1"></a>  <span class="fu">list</span>(</span>
+<span id="cb10-60"><a href="#cb10-60" tabindex="-1"></a>    <span class="at">station_id =</span> stations_meta<span class="sc">$</span>station_id,</span>
+<span id="cb10-61"><a href="#cb10-61" tabindex="-1"></a>    <span class="at">station_name =</span> stations_meta<span class="sc">$</span>station_name,</span>
+<span id="cb10-62"><a href="#cb10-62" tabindex="-1"></a>    <span class="at">city_name =</span> stations_meta<span class="sc">$</span>city_name</span>
+<span id="cb10-63"><a href="#cb10-63" tabindex="-1"></a>  ),</span>
+<span id="cb10-64"><a href="#cb10-64" tabindex="-1"></a>  <span class="cf">function</span>(station_id, station_name, city_name) {</span>
+<span id="cb10-65"><a href="#cb10-65" tabindex="-1"></a>    <span class="co"># Download all available data with internal parallel processing for chunks</span></span>
+<span id="cb10-66"><a href="#cb10-66" tabindex="-1"></a>    station_data <span class="ot">&lt;-</span> <span class="fu">download_all_data_for_station</span>(</span>
+<span id="cb10-67"><a href="#cb10-67" tabindex="-1"></a>      <span class="at">station_id =</span> station_id,</span>
+<span id="cb10-68"><a href="#cb10-68" tabindex="-1"></a>      <span class="at">parameters =</span> parameters,</span>
+<span id="cb10-69"><a href="#cb10-69" tabindex="-1"></a>      <span class="at">frequency =</span> frequency,</span>
+<span id="cb10-70"><a href="#cb10-70" tabindex="-1"></a>      <span class="at">parallel =</span> <span class="cn">TRUE</span>, <span class="co"># Also parallelize time chunks</span></span>
+<span id="cb10-71"><a href="#cb10-71" tabindex="-1"></a>      <span class="at">show_progress =</span> <span class="cn">FALSE</span> <span class="co"># Disable messages in parallel</span></span>
+<span id="cb10-72"><a href="#cb10-72" tabindex="-1"></a>    )</span>
+<span id="cb10-73"><a href="#cb10-73" tabindex="-1"></a></span>
+<span id="cb10-74"><a href="#cb10-74" tabindex="-1"></a>    <span class="co"># Save to Parquet file</span></span>
+<span id="cb10-75"><a href="#cb10-75" tabindex="-1"></a>    file_name <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="st">&quot;bulk_station_data&quot;</span>, <span class="fu">paste0</span>(<span class="st">&quot;data_&quot;</span>, station_id, <span class="st">&quot;.parquet&quot;</span>))</span>
+<span id="cb10-76"><a href="#cb10-76" tabindex="-1"></a>    arrow<span class="sc">::</span><span class="fu">write_parquet</span>(station_data, <span class="at">sink =</span> file_name, <span class="at">compression =</span> <span class="st">&quot;snappy&quot;</span>)</span>
+<span id="cb10-77"><a href="#cb10-77" tabindex="-1"></a></span>
+<span id="cb10-78"><a href="#cb10-78" tabindex="-1"></a>    <span class="fu">return</span>(file_name)</span>
+<span id="cb10-79"><a href="#cb10-79" tabindex="-1"></a>  },</span>
+<span id="cb10-80"><a href="#cb10-80" tabindex="-1"></a>  <span class="at">.options =</span> <span class="fu">furrr_options</span>(<span class="at">seed =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb10-81"><a href="#cb10-81" tabindex="-1"></a>)</span>
+<span id="cb10-82"><a href="#cb10-82" tabindex="-1"></a></span>
+<span id="cb10-83"><a href="#cb10-83" tabindex="-1"></a><span class="fu">plan</span>(sequential) <span class="co"># Reset to sequential processing</span></span></code></pre></div>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="common-issues-and-solutions">Common Issues and Solutions</h3>
+<h4 id="invalid-station_id-format">“Invalid station_id format”</h4>
+<p><strong>Problem:</strong> Station ID is not in valid UUID format.</p>
+<p><strong>Solution:</strong></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="co"># Get valid station IDs from list_stations()</span></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>stations <span class="ot">&lt;-</span> <span class="fu">list_stations</span>()</span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a>valid_station_id <span class="ot">&lt;-</span> stations<span class="sc">$</span>station_id[<span class="dv">1</span>]</span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a><span class="co"># Use this ID in your downloads</span></span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">download_air_quality_data</span>(</span>
+<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a>  <span class="at">station_id =</span> valid_station_id,</span>
+<span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a>  <span class="at">parameters =</span> <span class="fu">c</span>(<span class="st">&quot;PM10&quot;</span>),</span>
+<span id="cb11-9"><a href="#cb11-9" tabindex="-1"></a>  <span class="at">start_datetime =</span> <span class="st">&quot;2025-03-16 00:00&quot;</span>,</span>
+<span id="cb11-10"><a href="#cb11-10" tabindex="-1"></a>  <span class="at">end_datetime =</span> <span class="st">&quot;2025-03-17 00:00&quot;</span></span>
+<span id="cb11-11"><a href="#cb11-11" tabindex="-1"></a>)</span></code></pre></div>
+<h4 id="start_datetime-must-be-before-end_datetime">“start_datetime must
+be before end_datetime”</h4>
+<p><strong>Problem:</strong> Date range is reversed or invalid.</p>
+<p><strong>Solution:</strong></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="co"># Correct format: &quot;YYYY-MM-DD HH:MM&quot;</span></span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>start_datetime <span class="ot">&lt;-</span> <span class="st">&quot;2025-03-01 00:00&quot;</span> <span class="co"># Earlier date</span></span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a>end_datetime <span class="ot">&lt;-</span> <span class="st">&quot;2025-03-31 23:59&quot;</span> <span class="co"># Later date</span></span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" tabindex="-1"></a><span class="co"># Check your dates before downloading</span></span>
+<span id="cb12-6"><a href="#cb12-6" tabindex="-1"></a>lubridate<span class="sc">::</span><span class="fu">ymd_hm</span>(start_datetime) <span class="sc">&lt;</span> lubridate<span class="sc">::</span><span class="fu">ymd_hm</span>(end_datetime)</span></code></pre></div>
+<h4 id="empty-or-no-data-returned">Empty or No Data Returned</h4>
+<p><strong>Problem:</strong> Query returns empty tibble.</p>
+<p><strong>Possible causes:</strong></p>
+<ol style="list-style-type: decimal">
+<li>Station has no data for the specified date range</li>
+<li>Parameters not measured at this station</li>
+<li>Network connectivity issues</li>
+<li>API temporarily unavailable</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="co"># Check if station exists and is active</span></span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a>stations <span class="ot">&lt;-</span> <span class="fu">list_stations</span>()</span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>station_info <span class="ot">&lt;-</span> stations <span class="sc">|&gt;</span> <span class="fu">filter</span>(station_id <span class="sc">==</span> your_station_id)</span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a><span class="co"># Try a recent date range (last 7 days)</span></span>
+<span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">download_air_quality_data</span>(</span>
+<span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a>  <span class="at">station_id =</span> your_station_id,</span>
+<span id="cb13-8"><a href="#cb13-8" tabindex="-1"></a>  <span class="at">parameters =</span> <span class="fu">c</span>(<span class="st">&quot;PM10&quot;</span>),</span>
+<span id="cb13-9"><a href="#cb13-9" tabindex="-1"></a>  <span class="at">start_datetime =</span> <span class="fu">format</span>(<span class="fu">Sys.time</span>() <span class="sc">-</span> <span class="dv">7</span> <span class="sc">*</span> <span class="dv">24</span> <span class="sc">*</span> <span class="dv">60</span> <span class="sc">*</span> <span class="dv">60</span>, <span class="st">&quot;%Y-%m-%d %H:%M&quot;</span>),</span>
+<span id="cb13-10"><a href="#cb13-10" tabindex="-1"></a>  <span class="at">end_datetime =</span> <span class="fu">format</span>(<span class="fu">Sys.time</span>(), <span class="st">&quot;%Y-%m-%d %H:%M&quot;</span>),</span>
+<span id="cb13-11"><a href="#cb13-11" tabindex="-1"></a>  <span class="at">frequency =</span> <span class="st">&quot;hourly&quot;</span></span>
+<span id="cb13-12"><a href="#cb13-12" tabindex="-1"></a>)</span>
+<span id="cb13-13"><a href="#cb13-13" tabindex="-1"></a></span>
+<span id="cb13-14"><a href="#cb13-14" tabindex="-1"></a><span class="co"># Check multiple stations to verify API connectivity</span></span></code></pre></div>
+<h4 id="slow-downloads">Slow Downloads</h4>
+<p><strong>Problem:</strong> Downloads taking too long.</p>
+<p><strong>Solutions:</strong></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="co"># 1. Use parallel processing</span></span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a>bulk_data <span class="ot">&lt;-</span> <span class="fu">bulk_download_air_quality_data</span>(</span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a>  <span class="at">start_datetime =</span> <span class="st">&quot;2025-03-16 00:00&quot;</span>,</span>
+<span id="cb14-4"><a href="#cb14-4" tabindex="-1"></a>  <span class="at">end_datetime =</span> <span class="st">&quot;2025-03-16 12:00&quot;</span>,</span>
+<span id="cb14-5"><a href="#cb14-5" tabindex="-1"></a>  <span class="at">parameters =</span> <span class="fu">c</span>(<span class="st">&quot;PM10&quot;</span>),</span>
+<span id="cb14-6"><a href="#cb14-6" tabindex="-1"></a>  <span class="at">parallel =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb14-7"><a href="#cb14-7" tabindex="-1"></a>  <span class="at">workers =</span> <span class="dv">4</span></span>
+<span id="cb14-8"><a href="#cb14-8" tabindex="-1"></a>)</span>
+<span id="cb14-9"><a href="#cb14-9" tabindex="-1"></a></span>
+<span id="cb14-10"><a href="#cb14-10" tabindex="-1"></a><span class="co"># 2. Reduce date range</span></span>
+<span id="cb14-11"><a href="#cb14-11" tabindex="-1"></a><span class="co"># Instead of years, download months at a time</span></span>
+<span id="cb14-12"><a href="#cb14-12" tabindex="-1"></a></span>
+<span id="cb14-13"><a href="#cb14-13" tabindex="-1"></a><span class="co"># 3. Use daily instead of hourly frequency</span></span>
+<span id="cb14-14"><a href="#cb14-14" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">download_air_quality_data</span>(</span>
+<span id="cb14-15"><a href="#cb14-15" tabindex="-1"></a>  <span class="at">station_id =</span> station_id,</span>
+<span id="cb14-16"><a href="#cb14-16" tabindex="-1"></a>  <span class="at">parameters =</span> <span class="fu">c</span>(<span class="st">&quot;PM10&quot;</span>),</span>
+<span id="cb14-17"><a href="#cb14-17" tabindex="-1"></a>  <span class="at">start_datetime =</span> <span class="st">&quot;2024-01-01 00:00&quot;</span>,</span>
+<span id="cb14-18"><a href="#cb14-18" tabindex="-1"></a>  <span class="at">end_datetime =</span> <span class="st">&quot;2024-12-31 23:59&quot;</span>,</span>
+<span id="cb14-19"><a href="#cb14-19" tabindex="-1"></a>  <span class="at">frequency =</span> <span class="st">&quot;daily&quot;</span> <span class="co"># Much smaller dataset</span></span>
+<span id="cb14-20"><a href="#cb14-20" tabindex="-1"></a>)</span>
+<span id="cb14-21"><a href="#cb14-21" tabindex="-1"></a></span>
+<span id="cb14-22"><a href="#cb14-22" tabindex="-1"></a><span class="co"># 4. Download fewer parameters at once</span></span></code></pre></div>
+<h4 id="package-future-not-found-parallel-processing">“Package ‘future’
+not found” (Parallel Processing)</h4>
+<p><strong>Problem:</strong> Trying to use parallel processing without
+required packages.</p>
+<p><strong>Solution:</strong></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">&quot;future&quot;</span>, <span class="st">&quot;furrr&quot;</span>, <span class="st">&quot;progressr&quot;</span>))</span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a><span class="fu">library</span>(future)</span>
+<span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a><span class="fu">library</span>(furrr)</span></code></pre></div>
+<h4 id="network-timeouts-or-connection-errors">Network Timeouts or
+Connection Errors</h4>
+<p><strong>Problem:</strong> API requests timing out.</p>
+<p><strong>Solutions:</strong></p>
+<ol style="list-style-type: decimal">
+<li>Check internet connection</li>
+<li>Try again later (API might be under maintenance)</li>
+<li>Reduce number of parallel workers</li>
+<li>Use smaller date ranges or fewer parameters</li>
+</ol>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="co"># Reduce parallel workers if getting timeouts</span></span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">bulk_download_air_quality_data</span>(</span>
+<span id="cb16-3"><a href="#cb16-3" tabindex="-1"></a>  <span class="at">start_datetime =</span> <span class="st">&quot;2025-03-16 00:00&quot;</span>,</span>
+<span id="cb16-4"><a href="#cb16-4" tabindex="-1"></a>  <span class="at">end_datetime =</span> <span class="st">&quot;2025-03-16 12:00&quot;</span>,</span>
+<span id="cb16-5"><a href="#cb16-5" tabindex="-1"></a>  <span class="at">parameters =</span> <span class="fu">c</span>(<span class="st">&quot;PM10&quot;</span>),</span>
+<span id="cb16-6"><a href="#cb16-6" tabindex="-1"></a>  <span class="at">parallel =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb16-7"><a href="#cb16-7" tabindex="-1"></a>  <span class="at">workers =</span> <span class="dv">2</span> <span class="co"># Reduced from 8</span></span>
+<span id="cb16-8"><a href="#cb16-8" tabindex="-1"></a>)</span></code></pre></div>
+<h4 id="memory-errors-in-parallel-mode">Memory Errors in Parallel
+Mode</h4>
+<p><strong>Problem:</strong> Out of memory when using parallel
+processing.</p>
+<p><strong>Solutions:</strong></p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="co"># 1. Reduce number of workers</span></span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a>workers <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="co"># Instead of 8</span></span>
+<span id="cb17-3"><a href="#cb17-3" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" tabindex="-1"></a><span class="co"># 2. Process in smaller batches</span></span>
+<span id="cb17-5"><a href="#cb17-5" tabindex="-1"></a><span class="co"># 3. Write results to disk immediately (use Parquet/Arrow)</span></span>
+<span id="cb17-6"><a href="#cb17-6" tabindex="-1"></a><span class="co"># 4. Use daily frequency instead of hourly</span></span></code></pre></div>
+<h4 id="progress-bar-not-showing">Progress Bar Not Showing</h4>
+<p><strong>Problem:</strong> No progress indication during
+downloads.</p>
+<p><strong>Solution:</strong></p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="co"># For sequential downloads, ensure cli is installed</span></span>
+<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;cli&quot;</span>)</span>
+<span id="cb18-3"><a href="#cb18-3" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" tabindex="-1"></a><span class="co"># For parallel downloads, use progressr</span></span>
+<span id="cb18-5"><a href="#cb18-5" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;progressr&quot;</span>)</span>
+<span id="cb18-6"><a href="#cb18-6" tabindex="-1"></a><span class="fu">library</span>(progressr)</span>
+<span id="cb18-7"><a href="#cb18-7" tabindex="-1"></a></span>
+<span id="cb18-8"><a href="#cb18-8" tabindex="-1"></a><span class="fu">handlers</span>(<span class="at">global =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb18-9"><a href="#cb18-9" tabindex="-1"></a><span class="fu">handlers</span>(<span class="st">&quot;progress&quot;</span>)</span>
+<span id="cb18-10"><a href="#cb18-10" tabindex="-1"></a></span>
+<span id="cb18-11"><a href="#cb18-11" tabindex="-1"></a><span class="fu">with_progress</span>({</span>
+<span id="cb18-12"><a href="#cb18-12" tabindex="-1"></a>  data <span class="ot">&lt;-</span> <span class="fu">bulk_download_air_quality_data</span>(</span>
+<span id="cb18-13"><a href="#cb18-13" tabindex="-1"></a>    <span class="at">start_datetime =</span> <span class="st">&quot;2025-03-16 00:00&quot;</span>,</span>
+<span id="cb18-14"><a href="#cb18-14" tabindex="-1"></a>    <span class="at">end_datetime =</span> <span class="st">&quot;2025-03-16 12:00&quot;</span>,</span>
+<span id="cb18-15"><a href="#cb18-15" tabindex="-1"></a>    <span class="at">parameters =</span> <span class="fu">c</span>(<span class="st">&quot;PM10&quot;</span>),</span>
+<span id="cb18-16"><a href="#cb18-16" tabindex="-1"></a>    <span class="at">parallel =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb18-17"><a href="#cb18-17" tabindex="-1"></a>    <span class="at">workers =</span> <span class="dv">4</span>,</span>
+<span id="cb18-18"><a href="#cb18-18" tabindex="-1"></a>    <span class="at">show_progress =</span> <span class="cn">TRUE</span></span>
+<span id="cb18-19"><a href="#cb18-19" tabindex="-1"></a>  )</span>
+<span id="cb18-20"><a href="#cb18-20" tabindex="-1"></a>})</span></code></pre></div>
+<h3 id="getting-more-help">Getting More Help</h3>
+<p>If you’re still experiencing issues:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Check function documentation</strong>:</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a>?download_air_quality_data</span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a>?bulk_download_air_quality_data</span>
+<span id="cb19-3"><a href="#cb19-3" tabindex="-1"></a>?list_stations</span></code></pre></div></li>
+<li><p><strong>Review vignettes</strong> for detailed examples:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="fu">vignette</span>(<span class="st">&quot;getting-started&quot;</span>, <span class="at">package =</span> <span class="st">&quot;airqualitytr&quot;</span>)</span></code></pre></div></li>
+<li><p><strong>Report bugs</strong>: <a href="https://github.com/emraher/airqualitytr/issues">https://github.com/emraher/airqualitytr/issues</a></p>
+<ul>
+<li>Include your R version: <code>R.version.string</code></li>
+<li>Include package version:
+<code>packageVersion(&quot;airqualitytr&quot;)</code></li>
+<li>Provide a minimal reproducible example</li>
+<li>Include any error messages</li>
+</ul></li>
+</ol>
+<h2 id="data-source-and-citation">Data Source and Citation</h2>
+<h3 id="data-source">Data Source</h3>
+<p>This package accesses air quality monitoring data from the
+<strong>Turkish Ministry of Environment, Urbanization and Climate
+Change</strong> (Çevre, Şehircilik ve İklim Değişikliği Bakanlığı).</p>
+<p><strong>Official Data Portal:</strong> <a href="https://sim.csb.gov.tr/">https://sim.csb.gov.tr/</a></p>
+<h3 id="licensing-and-usage">Licensing and Usage</h3>
+<p><strong>Important:</strong> Before using this data in research or
+publications, please:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Check the official data policy</strong> at the Ministry’s
+website for:
+<ul>
+<li>Data licensing terms</li>
+<li>Citation requirements</li>
+<li>Usage restrictions and permissions</li>
+<li>Redistribution rights</li>
+</ul></li>
+<li><strong>Cite appropriately</strong> in your work:
+<ul>
+<li>Cite the data source (Turkish Ministry of Environment)</li>
+<li>Cite this R package if used for data access</li>
+<li>Follow any specific citation requirements from the Ministry</li>
+</ul></li>
+</ol>
+<h3 id="suggested-citation-format">Suggested Citation Format</h3>
+<p><strong>For the data:</strong></p>
+<pre><code>Turkish Ministry of Environment, Urbanization and Climate Change. (Year).
+Air Quality Monitoring Data. Retrieved from https://sim.csb.gov.tr/</code></pre>
+<p><strong>For this package:</strong></p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="fu">citation</span>(<span class="st">&quot;airqualitytr&quot;</span>)</span></code></pre></div>
+<h3 id="data-quality-and-limitations">Data Quality and Limitations</h3>
+<p>Please note:</p>
+<ul>
+<li>Data is provided as-is from the Ministry’s monitoring network</li>
+<li>This package does not validate or quality-control the data</li>
+<li>Users are responsible for their own data quality checks</li>
+<li>Station metadata and availability may change over time</li>
+<li>Historical data availability varies by station</li>
+<li>Some stations may have gaps or missing measurements</li>
+</ul>
+<p><strong>Always perform your own data quality assessment before
+analysis.</strong></p>
+<h2 id="code-of-conduct">Code of Conduct</h2>
+<p>Please note that the airqualitytr project is released with a <a href="https://eremrah.com/airqualitytr/CODE_OF_CONDUCT.html">Contributor
+Code of Conduct</a>. By contributing to this project, you agree to abide
+by its terms.</p>
+
+</body>
+</html>

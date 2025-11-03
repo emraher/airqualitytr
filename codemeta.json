@@ -1,0 +1,99 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "identifier": "airqualitytr",
+  "description": "Provides functions to download and explore air quality monitoring data from the Turkish Ministry of Environment, Urbanization and Climate Change. Enables researchers to access hourly and daily measurements of PM10, PM2.5, SO2, CO, NO2, NOX, NO, and O3 across monitoring stations throughout Turkey.",
+  "name": "airqualitytr: Turkish Air Quality Data Access Tools",
+  "codeRepository": "https://github.com/emraher/airqualitytr",
+  "issueTracker": "https://github.com/emraher/airqualitytr/issues",
+  "license": "https://spdx.org/licenses/MIT",
+  "version": "0.1.0",
+  "programmingLanguage": {
+    "@type": "ComputerLanguage",
+    "name": "R",
+    "url": "https://r-project.org"
+  },
+  "runtimePlatform": "R version 4.1.0 or higher",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Emrah",
+      "familyName": "Er",
+      "email": "eer@eremrah.com",
+      "@id": "https://orcid.org/0000-0001-9909-7479"
+    }
+  ],
+  "maintainer": [
+    {
+      "@type": "Person",
+      "givenName": "Emrah",
+      "familyName": "Er",
+      "email": "eer@eremrah.com",
+      "@id": "https://orcid.org/0000-0001-9909-7479"
+    }
+  ],
+  "softwareRequirements": {
+    "1": {
+      "@type": "SoftwareApplication",
+      "identifier": "R",
+      "name": "R",
+      "version": ">= 4.1.0"
+    },
+    "2": {
+      "@type": "SoftwareApplication",
+      "identifier": "dplyr",
+      "name": "dplyr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      }
+    },
+    "3": {
+      "@type": "SoftwareApplication",
+      "identifier": "httr",
+      "name": "httr"
+    },
+    "4": {
+      "@type": "SoftwareApplication",
+      "identifier": "jsonlite",
+      "name": "jsonlite"
+    },
+    "5": {
+      "@type": "SoftwareApplication",
+      "identifier": "rlang",
+      "name": "rlang"
+    },
+    "6": {
+      "@type": "SoftwareApplication",
+      "identifier": "rvest",
+      "name": "rvest"
+    },
+    "7": {
+      "@type": "SoftwareApplication",
+      "identifier": "tibble",
+      "name": "tibble"
+    },
+    "8": {
+      "@type": "SoftwareApplication",
+      "identifier": "tidyr",
+      "name": "tidyr"
+    }
+  },
+  "keywords": [
+    "air-quality",
+    "environmental-data",
+    "turkey",
+    "air-pollution",
+    "particulate-matter",
+    "PM10",
+    "PM2.5",
+    "monitoring-stations",
+    "data-access",
+    "api-wrapper"
+  ],
+  "dateCreated": "2025-10-27",
+  "dateModified": "2025-11-02",
+  "datePublished": "2025-11-02"
+}

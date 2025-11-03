@@ -1,0 +1,16 @@
+^airqualitytr\.Rproj$
+^\.Rproj\.user$
+^README\.Rmd$
+^README\.html$
+^LICENSE\.md$
+^\.github$
+^doc$
+^Meta$
+^cran-comments\.md$
+^\.lintr$
+^CRAN-SUBMISSION$
+^_pkgdown\.yml$
+^CODE_OF_CONDUCT\.md$
+^codemeta\.json$
+^\.claude$
+^tests/record_fixtures\.R$

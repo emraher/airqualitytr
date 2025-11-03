@@ -1,0 +1,45 @@
+url: https://eremrah.com/airqualitytr/
+template:
+  bootstrap: 5
+  bootswatch: flatly
+
+reference:
+- title: Data Download Functions
+  desc: Functions to download air quality data from Turkish monitoring stations
+  contents:
+  - download_air_quality_data
+  - download_all_data_for_station
+  - bulk_download_air_quality_data
+
+- title: Station and Parameter Information
+  desc: Functions to list available stations, cities, and measurement parameters
+  contents:
+  - list_stations
+  - list_cities
+  - list_parameters
+
+- title: Data Quality Assessment
+  desc: Functions to assess data quality and identify issues
+  contents:
+  - quality_report
+  - assess_completeness
+  - identify_gaps
+  - check_invalid_values
+  - print.air_quality_report
+
+- title: API Diagnostics
+  desc: Functions to test and diagnose API connectivity
+  contents:
+  - test_api_connection
+  - get_api_status
+  - print.api_diagnostic
+
+- title: Package Information
+  contents:
+  - airqualitytr-package
+
+articles:
+- title: Getting Started
+  navbar: ~
+  contents:
+  - getting-started

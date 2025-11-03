@@ -1,0 +1,731 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>SİM (Sürekli İzleme Merkezi) | T.C. Çevre, Şehircilik ve İklim Değişikliği Bakanlığı</title>
+    <link rel="shortcut icon" type="image/png" href="/Content/Custom/img/cevre_favicon.ico?v=zxck45lhas" />
+    <link href="/Content/Themes/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Content/Themes/css/animate.css" rel="stylesheet">
+    <link href="/Content/Themes/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Content/Themes/css/plugins/toastr/toastr.min.css" rel="stylesheet" />
+    <link href="/Content/Themes/css/style.css?v=zxck45lhas" rel="stylesheet">
+    <link href="/Content/Plugins/Loading/css/jquery.loadingModal.min.css" rel="stylesheet" />
+    <link href="/Content/Plugins/weather-icons-master/css/weather-icons.min.css" rel="stylesheet" />
+    <link href="/Content/Plugins/weather-icons-master/css/weather-icons.css" rel="stylesheet" />
+    <link href="/Content/Plugins/weather-icons-master/css/weather-icons-wind.min.css" rel="stylesheet" />
+    <link href="/Content/Plugins/weather-icons-master/css/weather-icons-wind.css" rel="stylesheet" />
+    <link href="/Content/Custom/css/Footer.css?v=zxck45lhas" rel="stylesheet" />
+    <style type="text/css">
+
+
+        .dropdown-menu.langs {
+            background-color: transparent !important;
+        }
+
+        .navbar-brand, .navbar-brand:hover, .navbar-brand:active {
+            background: transparent !important;
+            padding: 0px !important;
+            margin-top: 0px !important;
+        }
+
+        .landing-page .carousel-control {
+            display: inline-block;
+        }
+
+        .dropdown-menu {
+            box-shadow: none !important;
+        }
+
+            .dropdown-menu a:hover {
+                background: transparent !important;
+                color: #1ab394 !important;
+            }
+
+        .img-responsive {
+            margin-top: 125px;
+        }
+
+        .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+            color: #555;
+            background-color: transparent;
+        }
+
+        .landing-page .navbar-default .navbar-nav > li.active > a, .landing-page .navbar-default .navbar-nav > li > a:hover, .landing-page .navbar-default .navbar-nav > li > a:focus {
+            background: inherit;
+            color: #fff;
+            text-shadow: 0px 0px 20px rgba(255, 255, 255, 1);
+        }
+
+        .nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
+            background-color: #eee;
+            border-color: transparent !important;
+        }
+
+        .navbar {
+            border-radius: 0px !important;
+        }
+
+        .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+            max-height: 100% !important;
+        }
+
+        body.mini-navbar .navbar-default .nav > li > a {
+            font-size: 14px !important;
+        }
+
+        .logo-box {
+            position: relative;
+            width: 100px;
+            margin: 10px 0px 0px 100px;
+            float: right;
+        }
+
+        .navbar .logo-box {
+            background-image: url(../../Content/Custom/img/100yil-white.png);
+            background-size: cover;
+            background-position: center center;
+            width: 100px;
+            height: 55px;
+        }
+
+        .navbar.navbar-scroll .logo-box {
+            background-image: url(../../Content/Custom/img/100yilred.png);
+            background-size: cover;
+            background-position: center center;
+            width: 100px;
+            height: 55px;
+        }
+
+        @media (max-width: 768px) {
+            .landing-page .navbar-nav > li > a {
+                padding: 10px !important;
+            }
+
+            .landing-page .navbar .navbar-header .navbar-toggle {
+                padding: 20px 10px;
+            }
+        }
+        @media (max-width: 430px) {
+            .logo-box {
+                display: none !important;
+            }
+            .navbar .logo-box {
+              display:none !important;
+            }
+        }
+    </style>
+
+    
+    <link href="/Content/Plugins/sweetAlert/css/sweetalert.css" rel="stylesheet" />
+    <style type="text/css">
+        .header-overlay {
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            background: url(/Content/Custom/img/cevre_header3.png) rgba(0,0,0,.1);
+        }
+
+        .landing-page .container {
+            overflow: inherit !important;
+        }
+
+        .landing-page .carousel-caption {
+            top: 160px;
+        }
+
+        .landing-page .header-back {
+            height: 470px;
+            width: 100%;
+        }
+
+            .landing-page .header-back.one {
+                background-image: url('../../Content/Custom/img/sis_hakkında.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: 30%;
+            }
+
+            .landing-page .header-back.two {
+                background-image: url(/Content/Custom/img/HKI.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: 30%;
+            }
+
+            .landing-page .header-back.three {
+                background-image: url(/Content/Custom/img/Aritma-Tesisi.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: 30%;
+            }
+
+            .landing-page .header-back.four {
+                background-image: url(/Content/Custom/img/factory-wallpaper-2.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: 30%;
+            }
+
+            .landing-page .header-back.five {
+                background-image: url(/Content/Custom/img/DenizKirlilikİzleme.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: 64%;
+            }
+
+            .landing-page .header-back.six {
+                background-image: url(/Content/Custom/img/havza2.jpeg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: 50%;
+            }
+
+            .landing-page .header-back.seven {
+                background-image: url(/Content/Custom/img/steelblue.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: 30%;
+            }
+
+        .landing-page .services h2 {
+            color: #8d8d8d;
+        }
+
+        .landing-page .btn-new {
+            background-color: #616161;
+            border-color: #616161;
+            color: #FFFFFF;
+            font-size: 12px;
+            padding: 5px 7px;
+            border-radius: 30px;
+            font-weight: 600;
+            float: right;
+            text-transform: capitalize !important;
+        }
+
+            .landing-page .btn-new:hover {
+                background-color: #545454;
+                border-color: #545454;
+            }
+
+
+        .cibox {
+            border: 1px solid #e7eaec;
+        }
+
+            .cibox .ibox-content {
+                height: 320px !important;
+                overflow: hidden;
+                padding: 0px;
+                position: relative;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+
+                .cibox .ibox-content > img {
+                    height: 280px;
+                    z-index: 0;
+                }
+
+                .cibox .ibox-content > div {
+                    z-index: 1;
+                    background: #fff;
+                    padding: 20px;
+                    position: absolute;
+                    bottom: 0px;
+                    width: 100%;
+                }
+
+            .cibox:hover, .cibox.active {
+                border: 1px solid transparent;
+                -webkit-box-shadow: 0 3px 7px 0 #a8a8a8;
+                -moz-box-shadow: 0 3px 7px 0 #a8a8a8;
+                box-shadow: 0 3px 7px 0 #a8a8a8;
+            }
+
+
+            .cibox .ibox-content > div > span {
+                display: block;
+                margin-bottom: 8px;
+            }
+    </style>
+
+
+
+
+
+    <script src="/Content/Themes/js/jquery-3.7.1.js"></script>
+
+
+
+
+</head>
+<body id="page-top" class="landing-page no-skin-config">
+
+    <div class="navbar-wrapper">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/#page-top">
+                        <img class="visible-xs" style="width: auto;height: 42px;margin-top: 10px;" src="/Content/Custom/img/cevre_ve_sehircilik_bakanligi_logo.png?v=zxck45lhas" />
+                        <img class="hidden-xs" src="/Content/Custom/img/cevre_logo_whitebg.png?v=zxck45lhas" style="max-height: 121px; max-width: 326px;" />
+                    </a>
+                </div>
+
+                <div class="logo-box"></div>
+
+
+                <ul class="nav navbar-nav navbar-right hidden-xs" style="margin-left: 61px;">
+                    <li>
+                            <a href="/Account/SignIn"><i class="fa fa-user"></i> KURUMSAL GİRİŞ</a>
+                    </li>
+                    <li>
+                        <a href="#" id="selectLanguage" data-toggle="dropdown"><i class="fa fa-globe"></i> <strong>TR </strong> <b class="caret"></b></a>
+                        <ul class="dropdown-menu animated fadeInTop m-t-xs" style="min-width: 73px;background:#999;right:30px;">
+                                <li><a href="#">TR</a></li>
+                                <li><a href="#">ENG</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">ANA SAYFA</a></li>
+                        <li><a class="page-scroll" href="/#contact">İLETİŞİM</a></li>
+
+                        <li class="visible-xs">
+
+                                <a href="/Account/SignIn"><i class="fa fa-user"></i> KURUMSAL GİRİŞ</a>
+
+
+                        </li>
+
+                        <li class="visible-xs">
+                            <a href="#" id="selectLanguage" data-toggle="dropdown"><i class="fa fa-globe"></i> <strong>TR </strong> <b class="caret"></b></a>
+                            <ul class="dropdown-menu langs animated fadeInTop m-t-xs" style="min-width: 73px;background:transparent;">
+                                    <li><a href="#">TR</a></li>
+                                    <li><a href="#">ENG</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    
+
+<style type="text/css">
+    .product-imitation {
+        padding: 105px 0;
+    }
+
+    #services2 .ibox-content {
+        height: 320px !important;
+    }
+    .landing-page .navy-line {
+        margin: 10px auto 0;
+    }
+</style>
+
+<div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#inSlider" data-slide-to="0" class="active"></li>
+        <li data-target="#inSlider" data-slide-to="1"></li>
+        <li data-target="#inSlider" data-slide-to="2"></li>
+        <li data-target="#inSlider" data-slide-to="3"></li>
+        <li data-target="#inSlider" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+
+        <div class="item active">
+            <div class="container">
+                <div class="carousel-caption blank">
+                    <h1>
+                        ULUSAL HAVA KALİTESİ <br />
+                        İZLEME AĞI (UHKİA)
+                    </h1>
+                    <h4>
+                        Karar vericilerin ve yetkili otoritelerin hava kalitesinin iyileştirilmesi amacıyla oluşturacakları politika, strateji ve eylem planlarını en doğru, güvenilir ve temsiliyeti yüksek hava kalitesi verisi ile desteklemek amacıyla 2005 yılında kurulmuş olan Ulusal Hava Kalitesi İzleme Ağı, ülke geneline yayılmış olan izleme istasyonları ile görev yapmakta olup hem işletimi ve yönetiminde iyileştirmeler yapılarak hem de ağın ihtiyaca uygun olarak genişlemesi sağlanarak sürekli olarak geliştirilmektedir.
+                        Halkın hava kalitesi verisine erişim hakkı kapsamında <a href="//www.havaizleme.gov.tr">www.havaizleme.gov.tr</a> internet adresinde kamuoyu ile paylaşılmakta olan hava kalitesi izleme verisi, genel halkın veriyi kolayca anlayabilmesi için ilave olarak Hava Kalitesi İndeksi (HKİ) denilen ve hava kalitesini iyi, orta, hassas, sağlıksız, kötü ve tehlikeli şeklinde derecelendiren bir sınıflama sistemi ile de paylaşılmaktadır.
+                    </h4>
+                    
+                </div>
+            </div>
+            <div class="header-overlay"></div>
+            <div class="header-back two"></div>
+        </div>
+
+        <div class="item">
+            <div class="container">
+                <div class="carousel-caption blank">
+                    <H1>
+                        EVSEL VE ENDÜSTRİYEL<br />
+                        KİRLİLİK İZLEME PROGRAMI (EKİP)
+                    </H1>
+                    <h4>
+                        Su kaynaklarının korunması ve sürdürülebilirliğinin sağlanması, kirliliğin önlenmesi,  havzalarda alınan önlemlerin ve eylem planlarının etkinliğinin belirlenmesi,  su kaynaklarının kalite değişimlerinin gözlemlenmesi, ilgili plan ve programlara veri sağlanması amaçlanmıştır. Havza bazında gerçekleştirilen çalışmaların, merkezde girdilerinin oluşturulması, uzmanlarca yorumlanması ve ardından gerekli önlemlerin alınması amacıyla yürütülen çalışmaların tümüdür.
+                    </h4>
+                </div>
+            </div>
+            <div class="header-overlay"></div>
+            <div class="header-back six"></div>
+        </div>
+
+        <div class="item">
+            <div class="container">
+                <div class="carousel-caption blank">
+                    <H1>
+                        DENİZLERDE BÜTÜNLEŞİK KİRLİLİK <br />
+                        İZLEME PROGRAMI (DEN-İZ)
+                    </H1>
+                    <h4>
+                        Ulusal mevzuatımız ve uluslar arası sözleşmeler ( Barselona ve Bükreş) ve AB Mevzuatı çerçevesinde "Denizlerde Bütünleşik  Kirlilik İzleme Çalışması"  yürütülmektedir. Çalışma ile tüm denizlerimizde meydana gelen kirlilik düzenli olarak izlenerek, Ulusal deniz ve kıyı yönetimi politika ve stratejilerinin belirlenmesine altlık oluşturulması amaçlanmaktadır.
+                        Karadeniz, Marmara Denizi ve Boğazlar, Akdeniz ve Ege Denizi olmak üzere tüm denizlerimizde kıyı suları, geçiş suları ve deniz sularında toplam 428 noktada;  deniz suyu , sedimanda ve biyotada; fizikokimyasal, kimyasal ve biyolojik izleme, ayrıca 9 noktada mikroplastik çalışması yapılmaktadır.
+                    </h4>
+                </div>
+            </div>
+            <div class="header-overlay"></div>
+            <div class="header-back five"></div>
+        </div>
+
+        <div class="item">
+            <div class="container">
+                <div class="carousel-caption blank">
+                    <h1>
+                        SÜREKLİ ATIK SU <br />
+                        İZLEME SİSTEMİ (SAİS)
+                    </h1>
+                    <h4>
+                        Kurulu kapasitesi 5.000 m<sup>3</sup>/gün ve üzeri olan atıksu arıtma tesisleri çıkış suları sürekli 7/24 online izlenmektedir. Tesislerde; Sıcaklık, pH, Çözünmüş oksijen, Elektriksel İletkenlik, Debi parametreleri ölçüm sonuçları Bakanlığımız Merkezi yazılımına anlık (on-line) olarak iletilmektedir.
+                        22/03/2015 tarihli ve 29303 sayılı Resmi Gazete'de yayımlanarak yürürlüğe giren "Sürekli Atıksu İzleme Sistemleri Tebliği" ile izleme sistemlerine; Kimyasal Oksijen ihtiyacı(KOİ) ve Askıda Katı Madde(AKM) parametreleri eklenmiştir. Eklenen yeni cihazlarının kurulumları sağlanmaktadır. Bu sayede sistem erken uyarı amaçlı kullanılacaktır.
+                        30 adet tesisle başlanan sürekli atıksu izleme çalışmalarında entegrasyonu sağlanan tesis sayısı ülke genelinde 457'e yükselmiştir. Bunlara ek olarak 89 adet Marbin (Marmara İzleme) istasyonu bulunmaktadır. Bu sayede uzaktan ve etkin denetim mekanizması geliştirilmiştir.
+                    </h4>
+                </div>
+            </div>
+            <div class="header-overlay"></div>
+            <div class="header-back three"></div>
+        </div>
+
+        <div class="item">
+            <div class="container">
+                <div class="carousel-caption blank">
+                    <h1>
+                        SÜREKLİ EMİSYON ÖLÇÜM SİSTEMİ (SEÖS)
+                    </h1>
+                    <h4>
+                        Sanayi Kaynaklı Hava Kirliliğinin Kontrolü Yönetmeliği ve Atıkların Yakılmasına İlişkin Yönetmelik kapsamında kirletici vasfı yüksek sanayi tesislerinden yayılan kirletici parametrelerin (baca gazı emisyonlarının) sürekli olarak ölçülmesi zorunludur.
+                        Bu amaçla, sabit kaynaklarda sürekli emisyon ölçüm sistemlerinin kalite güvencesini sağlamayı amaçlayan ve uluslararası kabul gören EN 14181 standardı esas
+                        alınarak birçok teknik hususları içeren “Sürekli Emisyon Ölçüm Sistemleri (SEÖS) Tebliği” 12 Ekim 2011 tarihli ve 28082 sayılı Resmi Gazetede yayımlanarak yürürlüğe girmiştir.
+
+                        Oluşan verinin güvenilirliğinin sağlanması, depolanması, geçerli kılınması ve Bakanlık merkezine çevrimiçi (online) aktarılmasına yönelik 24 Nisan 2014 tarihli ve 2014/12 sayılı
+                        Sürekli Emisyon Ölçüm Sistemleri Çevrimiçi (on-line) İzleme Genelgesi yayımlanmıştır.
+                        SEÖS ile kirletici vasfı yüksek <span style="color:cornflowerblue">412</span> sanayi tesisine ait <span style="color:cornflowerblue">798</span> bacada CO, NOx, SO<sub>2</sub>, TOZ vb. kirletici parametrelerin ölçüm sonuçları 7/24 on-line izlenerek Bakanlığımız Merkezi Veri Tabanına
+                        anlık olarak aktarılmaktadır.
+                    </h4>
+                </div>
+            </div>
+            <div class="header-overlay"></div>
+            <div class="header-back four"></div>
+        </div>
+
+
+        <a class="left carousel-control" href="#inSlider" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#inSlider" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+<section id="modules" class="container features">
+
+    <div class="text-center m-b-lg">
+        <div class="navy-line"></div>
+        <h1> <span class="navy">Sistem Modülleri</span> </h1>
+    </div>
+
+    <section id="services2" class="container features">
+
+        <div class="row">
+
+            <div class="col-md-4 col-sm-6">
+                <a href="/Services/AirQuality">
+                    <div class="ibox cibox">
+                        <div class="ibox-content" style="background-image: url('/Content/Custom/img/home-hki.png'); background-position-y: -50px;">
+                            <div>
+                                <strong>Ulusal Hava Kalitesi İzleme Ağı (UHKİA)</strong>
+                                <span class="product-price2">383 <span>Hava Kalite İzleme İstasyonu</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <a href="/RB/VWRB_Basin/BasinOverview">
+                    <div class="ibox cibox">
+                        <div class="ibox-content" style="background-image: url('/Content/Custom/img/Havza.jpg') ">
+                            <div>
+                                <strong>EKİP Havza İzleme </strong>
+                                <span class="product-price2">Havza Örneklem İstasyonu 110 Adet</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <a href="/SM/VWSM_RatingUnits/MapOverviewNew">
+                    <div class="ibox cibox">
+                        <div class="ibox-content" style="background-image: url('/Content/Custom/img/home-sea.png')">
+                            <div>
+                                <strong>Denizlerde Bütünleşik Kirlilik İzleme (DEN-İZ)</strong>
+                                <span class="product-price2">Tüm Denizlerimizde 428 Adet İstasyon</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <a href="/STN/VWSTN_Station/WasteWaterDashboard">
+                    <div class="ibox cibox">
+                        <div class="ibox-content" style="background-image: url('/Content/Custom/img/home-water.jpg')">
+                            <div>
+                                <strong>Sürekli Atık Su İzleme Sistemi (SAİS)</strong>
+                                <span class="product-price2">
+                                    457 SAİS  /  89 Marbin (Marmara İzleme)
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                
+                <a href="/REQ/VWREQ_FeasibilityOperation/Application">
+                    <div class="ibox cibox">
+                        <div class="ibox-content" style="background-image: url('/Content/Custom/img/SEOS.jpg'); background-position-y: -50px;">
+                            <div>
+                                <strong>Sürekli Emisyon Ölçüm Sistemi (SEÖS)</strong>
+                                <span class="product-price2">798 <span>Emisyon Ölçüm Noktası</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            
+
+            <div class="col-md-4 col-sm-6">
+            <a href="/STN/STN_Report/StationDataDownloadNew">
+                <div class="ibox cibox">
+                    <div class="ibox-content" style="background-image: url('/Content/Custom/img/Bank-Data.jpg')">
+                        <div>
+                            <strong>SİM Veri Bankası</strong>
+                            <span class="product-price2">Tüm İstasyon Verileri</span>
+
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        </div>
+
+    </section>
+
+</section>
+<script src="/Content/Plugins/sweetAlert/js/sweetalert.min.js"></script>
+
+<script type="text/javascript">
+
+        $(document).on("click", "#feasibilityButton", function () {
+            if ('False' == 'False') {
+                swal({
+                    title: "Dikkat!",
+                    text: "Kullanıcı Kaydınız Bulunmakta Mı?",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "Giriş Yap",
+                    cancelButtonText: "Kullanıcı Başvurusu Yap",
+                    closeOnConfirm: false,
+                    closeOnCancel: false,
+                }, function (isConfirm) {
+                    if (isConfirm) {
+                        window.open(window.location.origin.toString() + "/Account/SignIn")
+                    } else {
+                        window.open(window.location.origin.toString() + "/Account/SignUpSEOS")
+                    }
+                    swal.close();
+                });
+            }
+            else {
+                window.open(window.location.origin.toString() + "/REQ/VWREQ_FeasibilityOperation/Index")
+            }
+        });
+</script>
+
+    <footer class="clearfix page-scroll" id="contact" style="margin-top:40px;">
+        <div class="footlogo" style="background-image: url(/Content/Custom/img/csb.png);"></div>
+        <div class="footbody">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-8">
+                            <h4><span>LİNKLER</span></h4>
+                            <ul>
+                                <li><a href="https://csb.gov.tr/" target="_blank" style="margin-bottom:-5px;" class="footer-link">T.C. Çevre, Şehircilik ve İklim Değişikliği Bakanlığı</a> </li>
+                                <li><a href="https://ced.csb.gov.tr/" target="_blank" style="margin-bottom:-4px;" class="footer-link">Çevresel Etki Değerlendirmesi İzin ve Denetim Genel Müdürlüğü</a></li>
+                                <li><a href="https://lab.csb.gov.tr/" target="_blank" style="margin-bottom:-3px;" class="footer-link">Çevre Referans Laboratuvarı - Daire Başkanlığı</a></li>
+                                <li><a href="https://www.eea.europa.eu/tr" target="_blank" style="margin-bottom:-2px;" class="footer-link">Avrupa Çevre Ajansı</a></li>
+                                <li><a href="https://www.havaizleme.gov.tr/" target="_blank" style="margin-bottom:-3px;" class="footer-link">Ulusal Hava Kalitesi İzleme Ağı</a></li>
+                                <li><a href="/Services/Summary" target="_blank" style="margin-bottom:-3px;" class="footer-link">SİM Projesi Hakkında</a></li>
+                            </ul>
+
+                            <p class="clearfix">
+                                <a href="https://play.google.com/store/apps/details?id=com.infoline.havaizleme.android&hl=tr" target="_blank" class="clearfix pull-left" style="margin-right: 5px;">
+                                    <img src="/Content/Custom/img/android.png" style="width:120px" />
+                                </a>
+                                <a href="https://apps.apple.com/tr/app/ulusal-hava-kalitesi-i-zleme-a%C4%9F/id1409531776" target="_blank" class="clearfix pull-left">
+                                    <img src="/Content/Custom/img/ios.png" style="width:120px" />
+                                </a>
+                            </p>
+
+                        </div>
+
+                        <div class="col-md-4">
+                            <h4><span>İLETİŞİM</span></h4>
+                            <p>
+                                <span style="font-weight:700;margin-bottom:25px;">
+                                    T.C. Çevre, Şehircilik ve İklim Değişikliği Bakanlığı<br />
+                                </span>
+                                <i class="fa fa-map-marker" style="color:white;"></i><b> Adres: </b>Mustafa Kemal Mahallesi Eskişehir Devlet Yolu (Dumlupınar Bulvarı) 9. km No: 278 Çankaya/ANKARA    <br />
+                                <i class="fa fa-phone" style="color:white !important"></i> <b> Telefon:</b> +90 312 498 21 50 <br />
+                                <i class="fa fa-fax" style="color:white !important;margin-left: -3px;"></i><b> Fax:</b> +90 312 498 21 66 <br />
+                                
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2 text-center ">
+                            <p><strong>&copy; 2025 T.C. ÇEVRE, ŞEHİRCİLİK VE İKLİM DEĞİŞİKLİĞİ BAKANLIĞI</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="/Content/Themes/js/bootstrap.min.js"></script>
+    <script src="/Content/Themes/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="/Content/Themes/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="/Content/Themes/js/inspinia.js?v=zxck45lhas"></script>
+    <script src="/Content/Themes/js/plugins/pace/pace.min.js"></script>
+    <script src="/Content/Themes/js/plugins/wow/wow.min.js"></script>
+    <script src="/Content/Themes/js/plugins/flot/jquery.flot.js"></script>
+    <script type="text/javascript" src="/Content/Themes/js/jquery.livequery.min.js"></script>
+
+    <script src="/Content/Themes/js/plugins/toastr/toastr.min.js"></script>
+
+    <script src="/Content/Plugins/Loading/js/jquery.loadingModal.min.js"></script>
+
+    <!--Custom-->
+    <script type="text/javascript" src="/Content/Custom/js/master.js?v=zxck45lhas"></script>
+
+
+    <!--Custom-->
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $('.carousel').carousel({ interval: 8000 });
+            feedback();
+            $('body').scrollspy({
+                target: '.navbar-fixed-top',
+                offset: 80
+            });
+
+            $('a.page-scroll').bind('click', function (event) {
+                var link = $(this);
+                $('html, body').stop().animate({
+                    scrollTop: $(link.attr('href')).offset().top - 50
+                }, 500);
+                event.preventDefault();
+                $("#navbar").collapse('hide');
+            });
+
+        });
+
+        var cbpAnimatedHeader = (function () {
+            var docElem = document.documentElement,
+                header = document.querySelector('.navbar-default'),
+                didScroll = false,
+                changeHeaderOn = 200;
+            function init() {
+                window.addEventListener('scroll', function (event) {
+                    if (!didScroll) {
+                        didScroll = true;
+                        setTimeout(scrollPage, 250);
+                    }
+                }, false);
+            }
+            function scrollPage() {
+                var sy = scrollY();
+                if (sy >= changeHeaderOn) {
+                    $(header).addClass('navbar-scroll')
+                }
+                else {
+                    $(header).removeClass('navbar-scroll');
+                }
+                didScroll = false;
+            }
+            function scrollY() {
+                return window.pageYOffset || docElem.scrollTop;
+            }
+            init();
+
+        })();
+
+        new WOW().init();
+
+    </script>
+
+    
+
+
+    
+    <script type="text/javascript">
+        //window.dataLayer = window.dataLayer || [];
+        //function gtag() { dataLayer.push(arguments); }
+        //gtag('js', new Date());
+
+        //gtag('config', 'UA-128697641-1');
+    </script>
+
+
+</body>
+
+</html>

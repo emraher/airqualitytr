@@ -1,0 +1,804 @@
+\nonstopmode{}
+\documentclass[a4paper]{book}
+\usepackage[times,inconsolata,hyper]{Rd}
+\usepackage{makeidx}
+\makeatletter\@ifl@t@r\fmtversion{2018/04/01}{}{\usepackage[utf8]{inputenc}}\makeatother
+% \usepackage{graphicx} % @USE GRAPHICX@
+\makeindex{}
+\begin{document}
+\chapter*{}
+\begin{center}
+{\textbf{\huge Package `airqualitytr'}}
+\par\bigskip{\large \today}
+\end{center}
+\ifthenelse{\boolean{Rd@use@hyper}}{\hypersetup{pdftitle = {airqualitytr: Turkish Air Quality Data Access Tools}}}{}
+\ifthenelse{\boolean{Rd@use@hyper}}{\hypersetup{pdfauthor = {Emrah Er}}}{}
+\begin{description}
+\raggedright{}
+\item[Title]\AsIs{Turkish Air Quality Data Access Tools}
+\item[Version]\AsIs{0.1.0}
+\item[Date]\AsIs{2025-10-27}
+\item[Description]\AsIs{Provides functions to download and explore air quality monitoring
+data from the Turkish Ministry of Environment, Urbanization and Climate Change.
+Enables researchers to access hourly and daily measurements of PM10, PM2.5,
+SO2, CO, NO2, NOX, NO, and O3 across monitoring stations throughout Turkey.}
+\item[License]\AsIs{MIT + file LICENSE}
+\item[Language]\AsIs{en-US}
+\item[Encoding]\AsIs{UTF-8}
+\item[Roxygen]\AsIs{list(markdown = TRUE)}
+\item[RoxygenNote]\AsIs{7.3.2}
+\item[URL]\AsIs{}\url{https://github.com/emraher/airqualitytr}\AsIs{}
+\item[BugReports]\AsIs{}\url{https://github.com/emraher/airqualitytr/issues}\AsIs{}
+\item[Depends]\AsIs{R (>= 4.1.0)}
+\item[Imports]\AsIs{dplyr, httr, jsonlite, rlang, rvest, tibble, tidyr, tidyselect
+(>= 1.1.0), xml2 (>= 1.3.0)}
+\item[Suggests]\AsIs{cli, future, furrr, ggplot2, glue, httptest, knitr,
+lubridate, progressr, purrr, rmarkdown, scales, testthat (>=
+3.0.0)}
+\item[Config/testthat/edition]\AsIs{3}
+\item[VignetteBuilder]\AsIs{knitr}
+\item[NeedsCompilation]\AsIs{no}
+\item[Author]\AsIs{Emrah Er [aut, cre] (ORCID: <}\url{https://orcid.org/0000-0001-9909-7479}\AsIs{>)}
+\item[Maintainer]\AsIs{Emrah Er }\email{eer@eremrah.com}\AsIs{}
+\end{description}
+\Rdcontents{Contents}
+\HeaderA{airqualitytr-package}{airqualitytr: Turkish Air Quality Data Access Tools}{airqualitytr.Rdash.package}
+\aliasA{airqualitytr}{airqualitytr-package}{airqualitytr}
+\keyword{internal}{airqualitytr-package}
+%
+\begin{Description}
+Provides functions to download and explore air quality monitoring data from the Turkish Ministry of Environment, Urbanization and Climate Change. Enables researchers to access hourly and daily measurements of PM10, PM2.5, SO2, CO, NO2, NOX, NO, and O3 across monitoring stations throughout Turkey.
+
+The airqualitytr package provides functions to download and explore air quality
+monitoring data from the Turkish Ministry of Environment, Urbanization and
+Climate Change. It enables researchers to access hourly and daily measurements
+of PM10, PM2.5, SO2, CO, NO2, NOX, NO, and O3 across 300+ monitoring stations
+throughout Turkey.
+\end{Description}
+%
+\begin{Section}{Main Functions}
+
+\begin{itemize}
+
+\item{} \code{\LinkA{download\_air\_quality\_data()}{download.Rul.air.Rul.quality.Rul.data}}: Download air quality data for specific stations
+\item{} \code{\LinkA{bulk\_download\_air\_quality\_data()}{bulk.Rul.download.Rul.air.Rul.quality.Rul.data}}: Download data for multiple stations
+\item{} \code{\LinkA{list\_stations()}{list.Rul.stations}}: List all available monitoring stations
+\item{} \code{\LinkA{list\_cities()}{list.Rul.cities}}: List all cities with monitoring stations
+\item{} \code{\LinkA{list\_parameters()}{list.Rul.parameters}}: List all available pollutant parameters
+\item{} \code{\LinkA{quality\_report()}{quality.Rul.report}}: Generate data quality assessment reports
+
+\end{itemize}
+
+\end{Section}
+%
+\begin{Section}{Vignettes}
+
+Learn more about using airqualitytr:
+\begin{itemize}
+
+\item{} \code{vignette("getting-started", package = "airqualitytr")} - Introduction and basic usage
+\item{} \code{vignette("parallel-processing", package = "airqualitytr")} - Speed up downloads with parallel processing
+\item{} \code{vignette("data-quality", package = "airqualitytr")} - Assess data quality and completeness
+\item{} \code{vignette("long-term-data", package = "airqualitytr")} - Download and manage long-term datasets
+
+\end{itemize}
+
+\end{Section}
+%
+\begin{Section}{Package Information}
+
+\begin{itemize}
+
+\item{} GitHub: \url{https://github.com/emraher/airqualitytr}
+\item{} Report bugs: \url{https://github.com/emraher/airqualitytr/issues}
+
+\end{itemize}
+
+\end{Section}
+%
+\begin{Author}
+\strong{Maintainer}: Emrah Er \email{eer@eremrah.com} (\Rhref{https://orcid.org/0000-0001-9909-7479}{ORCID})
+
+\end{Author}
+%
+\begin{SeeAlso}
+Useful links:
+\begin{itemize}
+
+\item{} \url{https://github.com/emraher/airqualitytr}
+\item{} Report bugs at \url{https://github.com/emraher/airqualitytr/issues}
+
+\end{itemize}
+
+
+\end{SeeAlso}
+\HeaderA{assess\_completeness}{Assess Data Completeness}{assess.Rul.completeness}
+%
+\begin{Description}
+Calculates completeness metrics for air quality data, including percentage of
+missing values, gap identification, and temporal coverage.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+assess_completeness(data, by_parameter = TRUE, by_station = FALSE)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{data}] A tibble containing air quality data with columns: time, parameter, value
+
+\item[\code{by\_parameter}] Logical. If TRUE, calculates metrics separately for each parameter.
+Default is TRUE.
+
+\item[\code{by\_station}] Logical. If TRUE and station\_id column exists, calculates metrics
+separately for each station. Default is FALSE.
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+A tibble containing completeness metrics:
+\begin{description}
+
+\item[parameter] Parameter name (if by\_parameter = TRUE)
+\item[station\_id] Station ID (if by\_station = TRUE)
+\item[total\_records] Total number of records
+\item[missing\_records] Number of missing (NA) values
+\item[valid\_records] Number of valid (non-NA) values
+\item[completeness\_pct] Percentage of valid records
+\item[start\_date] First timestamp in data
+\item[end\_date] Last timestamp in data
+\item[expected\_records] Expected number of records based on frequency
+\item[coverage\_pct] Actual vs expected records percentage
+
+\end{description}
+
+\end{Value}
+%
+\begin{Examples}
+\begin{ExampleCode}
+## Not run: 
+data <- download_air_quality_data(
+  station_id = "468478b7-ace5-4bd3-b89a-a9c1c2e53080",
+  parameters = c("PM10", "NO2", "O3"),
+  start_datetime = "2025-03-01 00:00",
+  end_datetime = "2025-03-31 23:59",
+  frequency = "hourly"
+)
+
+# Get completeness summary
+completeness <- assess_completeness(data)
+print(completeness)
+
+# By station (if multiple stations)
+completeness_by_station <- assess_completeness(data, by_station = TRUE)
+
+## End(Not run)
+\end{ExampleCode}
+\end{Examples}
+\HeaderA{bulk\_download\_air\_quality\_data}{Bulk Download Air Quality Data for All Stations}{bulk.Rul.download.Rul.air.Rul.quality.Rul.data}
+%
+\begin{Description}
+Downloads time series air quality data (e.g., hourly measurements) for all available stations
+over a specified date range and for the given set of measurement parameters. This function retrieves
+station metadata via \code{list\_stations()} and the available cities via \code{list\_cities()}, then
+for each station downloads the measurement data using \code{download\_air\_quality\_data()}.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+bulk_download_air_quality_data(
+  start_datetime,
+  end_datetime,
+  parameters = c("PM10", "CO", "NO2"),
+  frequency = "hourly",
+  show_progress = TRUE,
+  parallel = FALSE,
+  workers = NULL
+)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{start\_datetime}] Start date-time in "YYYY-MM-DD HH:MM" format.
+
+\item[\code{end\_datetime}] End date-time in "YYYY-MM-DD HH:MM" format.
+
+\item[\code{parameters}] A character vector of pollutant parameters (e.g., \code{c("PM10", "CO", "NO2")}). Default is \code{c("PM10", "CO", "NO2")}.
+
+\item[\code{frequency}] Either \code{"hourly"} or \code{"daily"}. Default is \code{"hourly"}.
+
+\item[\code{show\_progress}] Logical. If \code{TRUE} and the \code{cli} package is available, displays a progress bar. Default is \code{TRUE}.
+
+\item[\code{parallel}] Logical. If \code{TRUE}, downloads will be performed in parallel using the \code{future} and \code{furrr} packages.
+You must set up a \code{future} plan before using this option (e.g., \code{future::plan(future::multisession)}).
+Default is \code{FALSE}.
+
+\item[\code{workers}] Integer. Number of parallel workers to use when \code{parallel = TRUE}. If \code{NULL} (default),
+uses the number of workers specified in the active \code{future} plan.
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+A tibble containing the combined time series data from all stations. The tibble includes:
+\begin{description}
+
+\item[time] POSIXct timestamp of the measurement.
+\item[station\_id] Station identifier.
+\item[city\_name] City name for the station.
+\item[station\_name] Station name.
+\item[parameter] Measurement parameter (e.g., "PM10").
+\item[value] The corresponding measurement value.
+\item[...] Additional metadata columns in snake\_case (city\_id, area\_type, etc.).
+
+\end{description}
+
+\end{Value}
+%
+\begin{Examples}
+\begin{ExampleCode}
+
+# Download one hour of data for all stations (small example)
+bulk_data <- bulk_download_air_quality_data(
+  start_datetime = "2024-03-01 00:00",
+  end_datetime = "2024-03-01 01:00",
+  parameters = c("PM10"),
+  frequency = "hourly"
+)
+
+\end{ExampleCode}
+\end{Examples}
+\HeaderA{check\_invalid\_values}{Check for Invalid Values in Air Quality Data}{check.Rul.invalid.Rul.values}
+%
+\begin{Description}
+Identifies invalid, impossible, or suspicious values in air quality measurements.
+This includes negative values, extreme outliers, and measurements that exceed
+physically plausible limits.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+check_invalid_values(data, parameter_limits = NULL, outlier_threshold = 5)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{data}] A tibble containing air quality data with columns: time, parameter, value
+
+\item[\code{parameter\_limits}] A named list of maximum plausible values for each parameter.
+If NULL (default), uses standard limits based on measurement ranges.
+
+\item[\code{outlier\_threshold}] Number of standard deviations beyond which a value is considered
+an outlier. Default is 5.
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+A tibble with the same structure as input data, plus additional columns:
+\begin{description}
+
+\item[is\_negative] Logical indicating if value is negative
+\item[exceeds\_limit] Logical indicating if value exceeds plausible maximum
+\item[is\_outlier] Logical indicating if value is a statistical outlier
+\item[is\_valid] Logical indicating if value passes all checks (TRUE = valid)
+\item[quality\_flag] Character describing the issue (if any)
+
+\end{description}
+
+\end{Value}
+%
+\begin{Examples}
+\begin{ExampleCode}
+## Not run: 
+data <- download_air_quality_data(
+  station_id = "468478b7-ace5-4bd3-b89a-a9c1c2e53080",
+  parameters = c("PM10", "NO2"),
+  start_datetime = "2025-03-01 00:00",
+  end_datetime = "2025-03-07 23:59"
+)
+
+# Check data quality
+checked_data <- check_invalid_values(data)
+
+# See flagged values
+flagged <- checked_data |> dplyr::filter(!is_valid)
+
+## End(Not run)
+\end{ExampleCode}
+\end{Examples}
+\HeaderA{download\_air\_quality\_data}{Download Air Quality Data with Additional Objects}{download.Rul.air.Rul.quality.Rul.data}
+%
+\begin{Description}
+Downloads time series air quality data for a specified station by simulating a form POST
+request to the Turkish Ministry's air quality data service. In addition to retrieving the
+raw time series (from the "Data" object), this function attempts to extract any other objects
+present in the JSON response (such as "Summaries", "Monitors", "StationIds", and "Parameters").
+Station and city names are automatically retrieved from the metadata.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+download_air_quality_data(
+  station_id,
+  parameters,
+  start_datetime,
+  end_datetime,
+  frequency = c("hourly", "daily"),
+  return_all = FALSE
+)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{station\_id}] A character string with the station's unique identifier.
+
+\item[\code{parameters}] A character vector of pollutant parameters (e.g., \code{c("PM10", "CO", "NO2")}).
+
+\item[\code{start\_datetime}] Start date-time in "YYYY-MM-DD HH:MM" format.
+
+\item[\code{end\_datetime}] End date-time in "YYYY-MM-DD HH:MM" format.
+
+\item[\code{frequency}] Either \code{"hourly"} or \code{"daily"}. Default is \code{"hourly"}.
+
+\item[\code{return\_all}] Logical. If \code{TRUE} (default), a named list with elements \code{data},
+\code{summaries}, \code{monitors}, \code{stations}, and \code{options} is returned.
+If \code{FALSE}, only the tidied time series data is returned.
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+If \code{return\_all = TRUE}, a named list with the following elements:
+\begin{description}
+
+\item[data] A tibble with the time series measurements (columns include \code{time},
+\code{station\_id}, \code{city\_name}, \code{station\_name}, \code{parameter}, and \code{value}).
+All column names are in snake\_case format.
+\item[summaries] A tibble with summary data (if available; otherwise an empty tibble).
+Column names are in snake\_case format.
+\item[monitors] A tibble with monitors metadata (if available; otherwise an empty tibble).
+Column names are in snake\_case format.
+\item[stations] A tibble with station metadata (if available; otherwise an empty tibble).
+Column names are in snake\_case format.
+\item[options] A tibble with available parameter/option settings (if available; otherwise empty).
+Column names are in snake\_case format.
+
+\end{description}
+
+If \code{return\_all = FALSE}, only the \code{data} tibble is returned with snake\_case column names.
+\end{Value}
+%
+\begin{Examples}
+\begin{ExampleCode}
+
+# Download one week of hourly PM10 data
+data <- download_air_quality_data(
+  station_id = "468478b7-ace5-4bd3-b89a-a9c1c2e53080",
+  parameters = c("PM10"),
+  start_datetime = "2024-03-01 00:00",
+  end_datetime = "2024-03-07 23:59",
+  frequency = "hourly"
+)
+head(data)
+
+# Download multiple parameters
+multi_data <- download_air_quality_data(
+  station_id = "468478b7-ace5-4bd3-b89a-a9c1c2e53080",
+  parameters = c("PM10", "NO2", "O3"),
+  start_datetime = "2024-03-01 00:00",
+  end_datetime = "2024-03-07 23:59",
+  frequency = "hourly"
+)
+
+\end{ExampleCode}
+\end{Examples}
+\HeaderA{download\_all\_data\_for\_station}{Download All Available Data for a Given Station}{download.Rul.all.Rul.data.Rul.for.Rul.station}
+%
+\begin{Description}
+Downloads all available air quality measurements for a specified station by iterating over
+manageable date ranges. The function automatically retrieves station metadata from the
+\code{list\_stations()} function and consolidates the chunked downloads into a single tibble.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+download_all_data_for_station(
+  station_id,
+  parameters,
+  frequency = c("hourly", "daily"),
+  show_progress = TRUE,
+  chunk_size = "1 year",
+  parallel = FALSE,
+  workers = NULL
+)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{station\_id}] A character string representing the station's unique identifier.
+
+\item[\code{parameters}] A character vector of pollutant parameters (e.g., \code{c("PM10", "CO", "NO2")}).
+
+\item[\code{frequency}] Either \code{"hourly"} or \code{"daily"}. Default is \code{"hourly"}.
+
+\item[\code{show\_progress}] Logical. If \code{TRUE}, displays informative messages during download. Default is \code{TRUE}.
+
+\item[\code{chunk\_size}] A character string specifying the size of each download window passed to
+\code{seq.POSIXt()} (e.g., \code{"1 month"}, \code{"1 year"}). Defaults to \code{"1 year"}.
+
+\item[\code{parallel}] Logical. If \code{TRUE}, downloads will be performed in parallel using the \code{future} and \code{furrr} packages.
+You must set up a \code{future} plan before using this option (e.g., \code{future::plan(future::multisession)}).
+Default is \code{FALSE}.
+
+\item[\code{workers}] Integer. Number of parallel workers to use when \code{parallel = TRUE}. If \code{NULL} (default),
+uses the number of workers specified in the active \code{future} plan.
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+A tibble containing the available time series air quality data for the given station.
+The tibble includes columns such as time, station\_id, station\_name, parameter, value,
+and other metadata columns retrieved from station information. All column names are in snake\_case format.
+\end{Value}
+%
+\begin{Examples}
+\begin{ExampleCode}
+
+# Download all available data for a station
+all_data <- download_all_data_for_station(
+  station_id = "468478b7-ace5-4bd3-b89a-a9c1c2e53080",
+  parameters = c("PM10", "NO2"),
+  frequency = "hourly",
+  chunk_size = "3 months"
+)
+
+\end{ExampleCode}
+\end{Examples}
+\HeaderA{format\_api\_error}{Enhanced Error Message Formatter}{format.Rul.api.Rul.error}
+\keyword{internal}{format\_api\_error}
+%
+\begin{Description}
+Formats API errors with helpful context and troubleshooting suggestions.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+format_api_error(error_type, details = NULL, http_status = NULL)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{error\_type}] Character. Type of error (e.g., "http", "network", "timeout")
+
+\item[\code{details}] Additional error details
+
+\item[\code{http\_status}] HTTP status code (if applicable)
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+Formatted error message with suggestions
+\end{Value}
+\HeaderA{get\_api\_status}{Get API Status Information}{get.Rul.api.Rul.status}
+%
+\begin{Description}
+Retrieves current status information about the Turkish Ministry of Environment
+API, including response times and availability.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+get_api_status()
+\end{verbatim}
+\end{Usage}
+%
+\begin{Value}
+A list containing API status metrics
+\end{Value}
+%
+\begin{Examples}
+\begin{ExampleCode}
+## Not run: 
+status <- get_api_status()
+print(status)
+
+## End(Not run)
+\end{ExampleCode}
+\end{Examples}
+\HeaderA{identify\_gaps}{Identify Time Gaps in Air Quality Data}{identify.Rul.gaps}
+%
+\begin{Description}
+Finds gaps in time series data where measurements are missing for extended periods.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+identify_gaps(data, min_gap_hours = 3, by_parameter = TRUE)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{data}] A tibble containing air quality data with columns: time, parameter, value
+
+\item[\code{min\_gap\_hours}] Minimum gap duration in hours to report. Default is 3 hours.
+
+\item[\code{by\_parameter}] Logical. If TRUE, identifies gaps separately for each parameter.
+Default is TRUE.
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+A tibble containing identified gaps:
+\begin{description}
+
+\item[parameter] Parameter name (if by\_parameter = TRUE)
+\item[gap\_start] Start time of gap
+\item[gap\_end] End time of gap
+\item[gap\_hours] Duration of gap in hours
+\item[missing\_records] Estimated number of missing records
+
+\end{description}
+
+\end{Value}
+%
+\begin{Examples}
+\begin{ExampleCode}
+## Not run: 
+data <- download_air_quality_data(
+  station_id = "468478b7-ace5-4bd3-b89a-a9c1c2e53080",
+  parameters = c("PM10"),
+  start_datetime = "2025-03-01 00:00",
+  end_datetime = "2025-03-31 23:59",
+  frequency = "hourly"
+)
+
+# Find gaps of 6+ hours
+gaps <- identify_gaps(data, min_gap_hours = 6)
+print(gaps)
+
+## End(Not run)
+\end{ExampleCode}
+\end{Examples}
+\HeaderA{list\_cities}{List Available Cities}{list.Rul.cities}
+%
+\begin{Description}
+Retrieves a list of cities available for filtering air quality data.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+list_cities()
+\end{verbatim}
+\end{Usage}
+%
+\begin{Value}
+A tibble with columns \code{city\_id} and \code{city\_name}.
+\end{Value}
+%
+\begin{Examples}
+\begin{ExampleCode}
+
+# Get all available cities
+cities <- list_cities()
+head(cities)
+
+\end{ExampleCode}
+\end{Examples}
+\HeaderA{list\_parameters}{List Available Measurement Parameters}{list.Rul.parameters}
+%
+\begin{Description}
+Retrieves a list of measurement parameters available for querying.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+list_parameters()
+\end{verbatim}
+\end{Usage}
+%
+\begin{Value}
+A tibble with details on available parameters.
+\end{Value}
+%
+\begin{Examples}
+\begin{ExampleCode}
+
+# Get all available parameters
+params <- list_parameters()
+print(params)
+
+\end{ExampleCode}
+\end{Examples}
+\HeaderA{list\_stations}{List Available Stations}{list.Rul.stations}
+%
+\begin{Description}
+Retrieves a metadata table of available stations from the air quality service.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+list_stations()
+\end{verbatim}
+\end{Usage}
+%
+\begin{Value}
+A tibble of station metadata.
+\end{Value}
+%
+\begin{Examples}
+\begin{ExampleCode}
+
+# Get all available stations
+stations <- list_stations()
+head(stations)
+
+# Filter stations by city
+library(dplyr)
+ankara_stations <- stations |>
+  filter(grepl("Ankara", city_name, ignore.case = TRUE))
+
+\end{ExampleCode}
+\end{Examples}
+\HeaderA{print.air\_quality\_report}{Print Method for Air Quality Report}{print.air.Rul.quality.Rul.report}
+%
+\begin{Description}
+Print Method for Air Quality Report
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+## S3 method for class 'air_quality_report'
+print(x, ...)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{x}] An air quality report object from quality\_report()
+
+\item[\code{...}] Additional arguments (not used)
+\end{ldescription}
+\end{Arguments}
+\HeaderA{print.api\_diagnostic}{Print Method for API Diagnostic}{print.api.Rul.diagnostic}
+%
+\begin{Description}
+Print Method for API Diagnostic
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+## S3 method for class 'api_diagnostic'
+print(x, ...)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{x}] An API diagnostic object from test\_api\_connection()
+
+\item[\code{...}] Additional arguments (not used)
+\end{ldescription}
+\end{Arguments}
+\HeaderA{quality\_report}{Generate Data Quality Report}{quality.Rul.report}
+%
+\begin{Description}
+Produces a comprehensive data quality report including validity checks,
+completeness assessment, and gap identification.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+quality_report(data, outlier_threshold = 5, min_gap_hours = 3)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{data}] A tibble containing air quality data with columns: time, parameter, value
+
+\item[\code{outlier\_threshold}] Number of standard deviations for outlier detection. Default is 5.
+
+\item[\code{min\_gap\_hours}] Minimum gap duration in hours to report. Default is 3.
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+A list containing:
+\begin{description}
+
+\item[summary] Overall data quality summary
+\item[completeness] Completeness metrics by parameter
+\item[invalid\_values] Summary of invalid value counts by type
+\item[gaps] Identified time gaps
+\item[flagged\_data] Data with quality flags (only invalid records)
+
+\end{description}
+
+\end{Value}
+%
+\begin{Examples}
+\begin{ExampleCode}
+## Not run: 
+data <- download_air_quality_data(
+  station_id = "468478b7-ace5-4bd3-b89a-a9c1c2e53080",
+  parameters = c("PM10", "NO2", "O3"),
+  start_datetime = "2025-03-01 00:00",
+  end_datetime = "2025-03-31 23:59",
+  frequency = "hourly"
+)
+
+# Generate quality report
+report <- quality_report(data)
+
+# View summary
+print(report$summary)
+
+# View completeness by parameter
+print(report$completeness)
+
+# View flagged values
+print(report$flagged_data)
+
+## End(Not run)
+\end{ExampleCode}
+\end{Examples}
+\HeaderA{test\_api\_connection}{Test API Connection}{test.Rul.api.Rul.connection}
+%
+\begin{Description}
+Tests the connection to the Turkish Ministry of Environment API and verifies
+that all required endpoints are accessible. Useful for troubleshooting
+connection issues before attempting large downloads.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+test_api_connection(timeout = 10, verbose = TRUE)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{timeout}] Timeout in seconds for each test. Default is 10.
+
+\item[\code{verbose}] Logical. If TRUE, prints detailed diagnostic information.
+Default is TRUE.
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+A list containing:
+\begin{description}
+
+\item[overall\_status] Character: "success", "partial", or "failure"
+\item[tests] Tibble with results for each endpoint test
+\item[recommendations] Character vector of troubleshooting recommendations
+
+\end{description}
+
+\end{Value}
+%
+\begin{Examples}
+\begin{ExampleCode}
+## Not run: 
+# Test API connection
+test_result <- test_api_connection()
+
+# Quick check
+if (test_result$overall_status == "success") {
+  message("API is accessible")
+}
+
+# Detailed diagnostics
+print(test_result$tests)
+
+## End(Not run)
+\end{ExampleCode}
+\end{Examples}
+\printindex{}
+\end{document}

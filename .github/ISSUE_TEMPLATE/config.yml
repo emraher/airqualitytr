@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question or Discussion
+    url: https://github.com/emraher/airqualitytr/discussions
+    about: Please ask questions and start discussions here
+  - name: Documentation
+    url: https://eremrah.com/airqualitytr/
+    about: Check the package documentation and vignettes

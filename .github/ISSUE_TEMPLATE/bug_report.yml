@@ -1,0 +1,64 @@
+name: Bug Report
+description: File a bug report
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Please provide a clear and concise description of what the bug is.
+      placeholder: Tell us what you see!
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: What should have happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Please provide a minimal reproducible example
+      placeholder: |
+        ```r
+        library(airqualitytr)
+        # Your code here
+        ```
+    validations:
+      required: true
+
+  - type: textarea
+    id: session-info
+    attributes:
+      label: Session Info
+      description: Please paste the output of `sessionInfo()` or `devtools::session_info()`
+      placeholder: |
+        R version X.X.X (YYYY-MM-DD)
+        Platform: ...
+      render: text
+    validations:
+      required: true
+
+  - type: dropdown
+    id: version
+    attributes:
+      label: Package Version
+      description: What version of airqualitytr are you using?
+      options:
+        - 0.1.0 (CRAN)
+        - Development (GitHub)
+        - Other (please specify in description)
+    validations:
+      required: true

@@ -1,0 +1,43 @@
+Package: airqualitytr
+Title: Turkish Air Quality Data Access Tools
+Version: 0.1.0
+Date: 2025-10-27
+Authors@R:
+    person("Emrah", "Er", , "eer@eremrah.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-9909-7479"))
+Description: Provides functions to download and explore air quality monitoring
+    data from the Turkish Ministry of Environment, Urbanization and Climate Change.
+    Enables researchers to access hourly and daily measurements of PM10, PM2.5,
+    SO2, CO, NO2, NOX, NO, and O3 across monitoring stations throughout Turkey.
+License: MIT + file LICENSE
+Language: en-US
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+URL: https://github.com/emraher/airqualitytr
+BugReports: https://github.com/emraher/airqualitytr/issues
+Depends:
+    R (>= 4.1.0)
+Imports:
+    dplyr,
+    httr,
+    jsonlite,
+    rlang,
+    rvest,
+    tibble,
+    tidyr,
+    tidyselect (>= 1.1.0),
+    xml2 (>= 1.3.0)
+Suggests:
+    cli,
+    future,
+    furrr,
+    ggplot2,
+    httptest,
+    knitr,
+    lubridate,
+    progressr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+VignetteBuilder: knitr
