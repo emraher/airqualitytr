@@ -37,7 +37,7 @@ jobs:
     runs-on: ${{ matrix.config.os }}
 
     name: ${{ matrix.config.os }} (${{ matrix.config.r }})
-    if: github.event_name != 'pull_request' || runner.os == 'Linux'
+    if: github.event_name != 'pull_request' || matrix.config.os == 'ubuntu-latest'
 
     strategy:
       fail-fast: false
