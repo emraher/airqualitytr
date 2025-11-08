@@ -37,15 +37,15 @@ jobs:
     runs-on: ${{ matrix.config.os }}
 
     name: ${{ matrix.config.os }} (${{ matrix.config.r }})
-    if: github.event_name != 'pull_request' || matrix.config.os == 'ubuntu-latest'
+    if: github.event_name != 'pull_request' || runner.os == 'Linux'
 
     strategy:
       fail-fast: false
       matrix:
         config:
-          - {os: ubuntu-latest,  r: 'release'}
-          - {os: windows-latest, r: 'release'}
-          - {os: macos-latest,   r: 'release'}
+          - {os: ubuntu-latest,  r: 'release', http-user-agent: 'release'}
+          - {os: windows-latest, r: 'release', http-user-agent: 'release'}
+          - {os: macos-latest,   r: 'release', http-user-agent: 'release'}
 
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
