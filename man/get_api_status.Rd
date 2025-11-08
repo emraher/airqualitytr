@@ -14,7 +14,7 @@ Retrieves current status information about the Turkish Ministry of Environment
 API, including response times and availability.
 }
 \examples{
-\dontrun{
+\donttest{
 status <- get_api_status()
 print(status)
 }

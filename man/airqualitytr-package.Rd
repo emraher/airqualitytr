@@ -6,7 +6,7 @@
 \alias{airqualitytr-package}
 \title{airqualitytr: Turkish Air Quality Data Access Tools}
 \description{
-Provides functions to download and explore air quality monitoring data from the Turkish Ministry of Environment, Urbanization and Climate Change. Enables researchers to access hourly and daily measurements of PM10, PM2.5, SO2, CO, NO2, NOX, NO, and O3 across monitoring stations throughout Turkey.
+Download and explore air quality monitoring data from the Turkish Ministry of Environment, Urbanization and Climate Change (\url{https://sim.csb.gov.tr/}). Enables researchers to access hourly and daily measurements of PM10, PM2.5, SO2, CO, NO2, NOX, NO, and O3 across monitoring stations throughout Turkey.
 
 The airqualitytr package provides functions to download and explore air quality
 monitoring data from the Turkish Ministry of Environment, Urbanization and
@@ -31,9 +31,6 @@ throughout Turkey.
 Learn more about using airqualitytr:
 \itemize{
 \item \code{vignette("getting-started", package = "airqualitytr")} - Introduction and basic usage
-\item \code{vignette("parallel-processing", package = "airqualitytr")} - Speed up downloads with parallel processing
-\item \code{vignette("data-quality", package = "airqualitytr")} - Assess data quality and completeness
-\item \code{vignette("long-term-data", package = "airqualitytr")} - Download and manage long-term datasets
 }
 }
 

@@ -533,7 +533,7 @@ This package accesses air quality monitoring data from the **Turkish Ministry of
 **For the data:**
 ```
 Turkish Ministry of Environment, Urbanization and Climate Change. (Year).
-Air Quality Monitoring Data. Retrieved from https://sim.csb.gov.tr/
+Air Quality Monitoring Data. Retrieved from <https://sim.csb.gov.tr/>
 ```
 
 **For this package:**

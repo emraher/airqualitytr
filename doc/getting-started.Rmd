@@ -14,13 +14,14 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.width = 7,
-  fig.height = 5
+  fig.height = 5,
+  eval = FALSE
 )
 ```
 
 ## Introduction
 
-**airqualitytr** provides easy access to air quality monitoring data from the Turkish Ministry of Environment, Urbanization and Climate Change (See: https://sim.csb.gov.tr/). This package enables researchers, analysts, and policymakers to download and analyze environmental data across Turkey's extensive network of monitoring stations.
+**airqualitytr** provides easy access to air quality monitoring data from the Turkish Ministry of Environment, Urbanization and Climate Change (See: <https://sim.csb.gov.tr/>). This package enables researchers, analysts, and policymakers to download and analyze environmental data across Turkey's extensive network of monitoring stations.
 
 ### What You Can Do
 
@@ -46,7 +47,7 @@ pak::pak("emraher/airqualitytr")
 
 Load the package:
 
-```{r eval=TRUE}
+```{r eval=FALSE}
 library(airqualitytr)
 library(dplyr)
 library(ggplot2)
@@ -62,7 +63,7 @@ Let's download some air quality data in three simple steps:
 
 First, explore available stations:
 
-```{r eval=TRUE}
+```{r eval=FALSE}
 # Get all available stations
 stations <- list_stations()
 
@@ -80,7 +81,7 @@ The station data includes:
 
 **Tip:** Filter stations by city or name:
 
-```{r eval=TRUE}
+```{r eval=FALSE}
 # Find stations in Ankara
 ankara_stations <- stations |>
   filter(grepl("Ankara", city_name, ignore.case = TRUE))
@@ -101,7 +102,7 @@ station_id <- selected_station$station_id
 
 See what pollutants are available:
 
-```{r eval=TRUE}
+```{r eval=FALSE}
 # List available parameters
 (parameters <- list_parameters())
 ```
@@ -121,7 +122,7 @@ Available parameters include:
 
 Now download air quality measurements:
 
-```{r eval=TRUE}
+```{r eval=FALSE}
 # Download one month of hourly PM10 data
 data <- download_air_quality_data(
   station_id = station_id,
@@ -149,7 +150,7 @@ The resulting data frame contains:
 
 Download multiple pollutants simultaneously:
 
-```{r eval=TRUE}
+```{r eval=FALSE}
 # Download PM10, NO2, and O3
 multi_param_data <- download_air_quality_data(
   station_id = station_id,
@@ -177,7 +178,7 @@ ggplot(multi_param_data, aes(x = time, y = value, color = parameter)) +
 
 Choose the appropriate frequency for your analysis:
 
-```{r eval=TRUE}
+```{r eval=FALSE}
 # Hourly data - more detail, larger datasets
 hourly_data <- download_air_quality_data(
   station_id = station_id,
@@ -208,7 +209,7 @@ nrow(daily_data) # ~31 rows (31 days)
 
 See all provinces with monitoring stations:
 
-```{r eval=TRUE}
+```{r eval=FALSE}
 (cities <- list_cities())
 
 # Count stations per city
@@ -223,7 +224,7 @@ stations_per_city
 
 Find stations matching specific criteria:
 
-```{r eval=TRUE}
+```{r eval=FALSE}
 # Stations in major cities
 major_cities <- c("İstanbul", "Ankara", "İzmir")
 
@@ -255,7 +256,7 @@ This makes data manipulation easier and more predictable.
 
 All timestamps are in **UTC**:
 
-```{r eval=TRUE}
+```{r eval=FALSE}
 # Check timezone
 attr(data$time, "tzone") # "UTC"
 
@@ -268,7 +269,7 @@ data_turkey_time <- data |>
 
 Missing measurements appear as `NA` in the `value` column:
 
-```{r eval=TRUE}
+```{r eval=FALSE}
 # Check for missing values
 summary(data$value)
 
@@ -290,7 +291,7 @@ clean_data <- data |>
 
 The package validates your inputs and provides helpful error messages:
 
-```{r eval=TRUE}
+```{r eval=FALSE}
 # Invalid station ID format
 try(
   download_air_quality_data(
@@ -329,7 +330,7 @@ try(
 
 ### Workflow 1: Compare Multiple Stations
 
-```{r eval=TRUE}
+```{r eval=FALSE}
 # Select 3 stations from different cities
 comparison_stations <- stations |>
   filter(station_name %in% c("İstanbul - Beşiktaş", "Ankara - Çankaya", "İzmir - Karabağlar")) |>
@@ -363,7 +364,7 @@ ggplot(comparison_data, aes(x = time, y = value, color = station_name)) +
 
 ### Workflow 2: Calculate Daily Statistics
 
-```{r eval=TRUE}
+```{r eval=FALSE}
 # Download hourly data
 hourly <- download_air_quality_data(
   station_id = station_id,
@@ -404,7 +405,7 @@ ggplot(daily_stats, aes(x = date, y = mean)) +
 
 ### Workflow 3: Identify Peak Pollution Events
 
-```{r eval=TRUE}
+```{r eval=FALSE}
 # Download one month of hourly PM10 data
 data <- download_air_quality_data(
   station_id = "ed5b48d0-14c4-47a4-8ad1-b5db53ae72c9",

@@ -11,6 +11,10 @@
 
 \item{...}{Additional arguments (not used)}
 }
+\value{
+The input \code{api_diagnostic} object, invisibly, to allow further
+inspection or programmatic checks after printing.
+}
 \description{
 Print Method for API Diagnostic
 }

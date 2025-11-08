@@ -25,9 +25,6 @@ NULL
 #' @section Vignettes:
 #' Learn more about using airqualitytr:
 #' - `vignette("getting-started", package = "airqualitytr")` - Introduction and basic usage
-#' - `vignette("parallel-processing", package = "airqualitytr")` - Speed up downloads with parallel processing
-#' - `vignette("data-quality", package = "airqualitytr")` - Assess data quality and completeness
-#' - `vignette("long-term-data", package = "airqualitytr")` - Download and manage long-term datasets
 #'
 #' @section Package Information:
 #' - GitHub: \url{https://github.com/emraher/airqualitytr}

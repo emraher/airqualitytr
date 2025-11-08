@@ -92,8 +92,8 @@ head(stations)
 #> # ℹ 13 more variables: company_id <chr>, company_id_name <chr>,
 #> #   station_group <int>, station_group_name <chr>, sector_code <int>,
 #> #   sector_code_name <chr>, basin_id <lgl>, data_periods <int>,
-#> #   source_type <int>, source_type_name <chr>, area_type <int>,
-#> #   area_type_name <chr>, is_portable <lgl>
+#> #   area_type <int>, area_type_name <chr>, source_type <int>,
+#> #   source_type_name <chr>, is_portable <lgl>
 ```
 
 ### List Available Measurement Parameters
@@ -153,9 +153,9 @@ head(data)
 #> # ℹ 16 more variables: station_sub_type <int>, company_id <chr>,
 #> #   company_id_name <chr>, station_group <int>, station_group_name <chr>,
 #> #   sector_code <int>, sector_code_name <chr>, basin_id <lgl>,
-#> #   data_periods <int>, source_type <int>, source_type_name <chr>,
-#> #   area_type <int>, area_type_name <chr>, is_portable <lgl>, parameter <chr>,
-#> #   value <dbl>
+#> #   data_periods <int>, area_type <int>, area_type_name <chr>,
+#> #   source_type <int>, source_type_name <chr>, is_portable <lgl>,
+#> #   parameter <chr>, value <dbl>
 ```
 
 The resulting tibble contains:
@@ -614,7 +614,7 @@ please:
 **For the data:**
 
     Turkish Ministry of Environment, Urbanization and Climate Change. (Year).
-    Air Quality Monitoring Data. Retrieved from https://sim.csb.gov.tr/
+    Air Quality Monitoring Data. Retrieved from <https://sim.csb.gov.tr/>
 
 **For this package:**
 

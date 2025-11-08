@@ -35,7 +35,7 @@ Calculates completeness metrics for air quality data, including percentage of
 missing values, gap identification, and temporal coverage.
 }
 \examples{
-\dontrun{
+\donttest{
 data <- download_air_quality_data(
   station_id = "468478b7-ace5-4bd3-b89a-a9c1c2e53080",
   parameters = c("PM10", "NO2", "O3"),

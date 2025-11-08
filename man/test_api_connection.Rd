@@ -26,7 +26,7 @@ that all required endpoints are accessible. Useful for troubleshooting
 connection issues before attempting large downloads.
 }
 \examples{
-\dontrun{
+\donttest{
 # Test API connection
 test_result <- test_api_connection()
 

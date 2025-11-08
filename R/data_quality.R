@@ -21,7 +21,7 @@
 #'
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' data <- download_air_quality_data(
 #'   station_id = "468478b7-ace5-4bd3-b89a-a9c1c2e53080",
 #'   parameters = c("PM10", "NO2"),
@@ -141,7 +141,7 @@ check_invalid_values <- function(data,
 #'
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' data <- download_air_quality_data(
 #'   station_id = "468478b7-ace5-4bd3-b89a-a9c1c2e53080",
 #'   parameters = c("PM10", "NO2", "O3"),
@@ -268,7 +268,7 @@ assess_completeness <- function(data,
 #'
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' data <- download_air_quality_data(
 #'   station_id = "468478b7-ace5-4bd3-b89a-a9c1c2e53080",
 #'   parameters = c("PM10"),
@@ -356,7 +356,7 @@ identify_gaps <- function(data,
 #'
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' data <- download_air_quality_data(
 #'   station_id = "468478b7-ace5-4bd3-b89a-a9c1c2e53080",
 #'   parameters = c("PM10", "NO2", "O3"),
@@ -438,6 +438,8 @@ quality_report <- function(data,
 #'
 #' @param x An air quality report object from quality_report()
 #' @param ... Additional arguments (not used)
+#' @return The input \code{air_quality_report} object, returned invisibly so callers
+#'   can continue working with the full report list.
 #'
 #' @export
 print.air_quality_report <- function(x, ...) {

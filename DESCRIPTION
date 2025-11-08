@@ -5,10 +5,10 @@ Date: 2025-10-27
 Authors@R:
     person("Emrah", "Er", , "eer@eremrah.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-9909-7479"))
-Description: Provides functions to download and explore air quality monitoring
-    data from the Turkish Ministry of Environment, Urbanization and Climate Change.
-    Enables researchers to access hourly and daily measurements of PM10, PM2.5,
-    SO2, CO, NO2, NOX, NO, and O3 across monitoring stations throughout Turkey.
+Description: Download and explore air quality monitoring data from the Turkish
+    Ministry of Environment, Urbanization and Climate Change (<https://sim.csb.gov.tr/>).
+    Enables researchers to access hourly and daily measurements of PM10, PM2.5, SO2,
+    CO, NO2, NOX, NO, and O3 across monitoring stations throughout Turkey.
 License: MIT + file LICENSE
 Language: en-US
 Encoding: UTF-8

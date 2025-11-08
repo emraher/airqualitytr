@@ -11,6 +11,10 @@
 
 \item{...}{Additional arguments (not used)}
 }
+\value{
+The input \code{air_quality_report} object, returned invisibly so callers
+can continue working with the full report list.
+}
 \description{
 Print Method for Air Quality Report
 }

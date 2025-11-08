@@ -17,7 +17,7 @@
 #'
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' # Test API connection
 #' test_result <- test_api_connection()
 #'
@@ -210,6 +210,8 @@ test_api_connection <- function(timeout = 10, verbose = TRUE) {
 #'
 #' @param x An API diagnostic object from test_api_connection()
 #' @param ... Additional arguments (not used)
+#' @return The input \code{api_diagnostic} object, invisibly, to allow further
+#'   inspection or programmatic checks after printing.
 #'
 #' @export
 print.api_diagnostic <- function(x, ...) {
@@ -238,7 +240,7 @@ print.api_diagnostic <- function(x, ...) {
 #'
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' status <- get_api_status()
 #' print(status)
 #' }

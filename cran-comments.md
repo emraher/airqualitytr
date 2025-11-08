@@ -24,3 +24,21 @@ The package provides functions to download and explore air quality monitoring da
 **NOX spelling**: This is not a misspelling. NOX (nitrogen oxides) is a standard atmospheric chemistry term and is included in our WORDLIST file.
 
 **URL timeout for https://sim.csb.gov.tr/**: This is the official Turkish government data portal URL. The site is accessible but may occasionally timeout from CRAN servers due to geographic distance or firewall settings. The URL has been verified to work correctly.
+
+
+# Resubmission
+
+  * DESCRIPTION: removed “Provides functions to …” phrasing and added the Ministry
+    data portal link as <https://sim.csb.gov.tr/> per CRAN auto-linking guidance.
+
+  * Documentation: added explicit \value sections for `print.air_quality_report()` and
+    `print.api_diagnostic()` and regenerated Rd files so exported methods describe the
+    returned object/class.
+
+  * Examples: replaced every `\dontrun{}` wrapper that performs API access with
+    `\donttest{}` (download, diagnostic, and quality-report helpers) so they can run
+    when network access is available but stay out of CRAN’s timed example suite.
+
+  * README/vignette URLs: confirmed https://sim.csb.gov.tr/ is still the authoritative
+    data site; intermittent timeouts are expected for that government host and can be
+    reproduced locally, so no alternative public mirror is available.
