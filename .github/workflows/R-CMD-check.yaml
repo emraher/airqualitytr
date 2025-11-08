@@ -3,49 +3,26 @@
 on:
   push:
     branches: [main, master]
-    paths:
-      - 'R/**'
-      - 'tests/**'
-      - 'man/**'
-      - 'vignettes/**'
-      - 'DESCRIPTION'
-      - 'NAMESPACE'
-      - '.Rbuildignore'
-      - '.github/workflows/R-CMD-check.yaml'
   pull_request:
     branches: [main, master]
-    paths:
-      - 'R/**'
-      - 'tests/**'
-      - 'man/**'
-      - 'vignettes/**'
-      - 'DESCRIPTION'
-      - 'NAMESPACE'
-      - '.Rbuildignore'
-      - '.github/workflows/R-CMD-check.yaml'
 
 name: R-CMD-check
 
 permissions: read-all
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
 
 jobs:
   R-CMD-check:
     runs-on: ${{ matrix.config.os }}
 
     name: ${{ matrix.config.os }} (${{ matrix.config.r }})
-    if: github.event_name != 'pull_request' || matrix.config.os == 'ubuntu-latest'
 
     strategy:
       fail-fast: false
       matrix:
         config:
-          - {os: ubuntu-latest,  r: 'release', http-user-agent: 'release'}
-          - {os: windows-latest, r: 'release', http-user-agent: 'release'}
-          - {os: macos-latest,   r: 'release', http-user-agent: 'release'}
+          - {os: macos-latest, r: 'release'}
+          - {os: windows-latest, r: 'release'}
+          - {os: ubuntu-latest, r: 'release'}
 
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
@@ -71,4 +48,3 @@ jobs:
       - uses: r-lib/actions/check-r-package@v2
         with:
           upload-snapshots: true
-          build_args: '"--no-manual" "--compact-vignettes=gs+qpdf"'
