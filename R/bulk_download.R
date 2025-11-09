@@ -28,7 +28,8 @@
 #' }
 #'
 #' @export
-#' @examplesIf interactive()
+#' @examples
+#' \dontrun{
 #' # Download one hour of data for all stations (small example)
 #' bulk_data <- bulk_download_air_quality_data(
 #'   start_datetime = "2024-03-01 00:00",
@@ -36,6 +37,7 @@
 #'   parameters = c("PM10"),
 #'   frequency = "hourly"
 #' )
+#' }
 bulk_download_air_quality_data <- function(start_datetime,
                                            end_datetime,
                                            parameters = c("PM10", "CO", "NO2"),
@@ -108,7 +110,7 @@ bulk_download_air_quality_data <- function(start_datetime,
   }
 
   # Prepare station data
-  station_data <- stns |> dplyr::select(.data$station_id, .data$station_name, .data$city_name)
+  station_data <- stns |> dplyr::select("station_id", "station_name", "city_name")
   n_stations <- nrow(station_data)
 
   # Execute downloads (parallel or sequential)

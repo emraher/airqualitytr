@@ -53,7 +53,7 @@ present in the JSON response (such as "Summaries", "Monitors", "StationIds", and
 Station and city names are automatically retrieved from the metadata.
 }
 \examples{
-\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontrun{
 # Download one week of hourly PM10 data
 data <- download_air_quality_data(
   station_id = "468478b7-ace5-4bd3-b89a-a9c1c2e53080",
@@ -72,5 +72,5 @@ multi_data <- download_air_quality_data(
   end_datetime = "2024-03-07 23:59",
   frequency = "hourly"
 )
-\dontshow{\}) # examplesIf}
+}
 }

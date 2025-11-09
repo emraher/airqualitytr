@@ -51,7 +51,7 @@ station metadata via \code{list_stations()} and the available cities via \code{l
 for each station downloads the measurement data using \code{download_air_quality_data()}.
 }
 \examples{
-\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontrun{
 # Download one hour of data for all stations (small example)
 bulk_data <- bulk_download_air_quality_data(
   start_datetime = "2024-03-01 00:00",
@@ -59,5 +59,5 @@ bulk_data <- bulk_download_air_quality_data(
   parameters = c("PM10"),
   frequency = "hourly"
 )
-\dontshow{\}) # examplesIf}
+}
 }

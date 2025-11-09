@@ -13,9 +13,9 @@ A tibble with columns \code{city_id} and \code{city_name}.
 Retrieves a list of cities available for filtering air quality data.
 }
 \examples{
-\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\donttest{
 # Get all available cities
 cities <- list_cities()
 head(cities)
-\dontshow{\}) # examplesIf}
+}
 }

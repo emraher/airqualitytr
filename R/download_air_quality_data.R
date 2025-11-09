@@ -33,7 +33,8 @@
 #'
 #' @importFrom rlang .data
 #' @export
-#' @examplesIf interactive()
+#' @examples
+#' \dontrun{
 #' # Download one week of hourly PM10 data
 #' data <- download_air_quality_data(
 #'   station_id = "468478b7-ace5-4bd3-b89a-a9c1c2e53080",
@@ -52,6 +53,7 @@
 #'   end_datetime = "2024-03-07 23:59",
 #'   frequency = "hourly"
 #' )
+#' }
 download_air_quality_data <- function(station_id,
                                       parameters,
                                       start_datetime,
@@ -175,7 +177,7 @@ download_air_quality_data <- function(station_id,
         ReadTime = as.POSIXct(.data$ReadTime, format = "%Y-%m-%dT%H:%M:%S", tz = "UTC")
       ) |>
       dplyr::left_join(stations_metadata, by = c("Stationid" = "station_id")) |>
-      dplyr::select(time = "ReadTime", station_id = "Stationid", .data$station_name:.data$is_portable, .data$parameter, .data$value)
+      dplyr::select(time = "ReadTime", station_id = "Stationid", "station_name":"is_portable", "parameter", "value")
   }
 
   # Extract additional objects if present in the response

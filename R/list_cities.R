@@ -5,10 +5,12 @@
 #' @return A tibble with columns \code{city_id} and \code{city_name}.
 #' @importFrom dplyr rename
 #' @export
-#' @examplesIf interactive()
+#' @examples
+#' \donttest{
 #' # Get all available cities
 #' cities <- list_cities()
 #' head(cities)
+#' }
 list_cities <- function() {
   # Define the API endpoint
   url <- "https://sim.csb.gov.tr/STN/STN_Report/StationDataDownloadNewDefaults"

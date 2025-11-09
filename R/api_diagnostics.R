@@ -112,7 +112,7 @@ test_api_connection <- function(timeout = 10, verbose = TRUE) {
         if (verbose) {
           cat(sprintf(
             "%s (%.2fs)\n",
-            if (result$status == "success") "\\u2713 PASS" else "\\u2717 FAIL",
+            if (result$status == "success") "\u2713 PASS" else "\u2717 FAIL",
             result$response_time
           ))
           if (result$status != "success" && !is.na(result$error_message)) {
@@ -126,7 +126,7 @@ test_api_connection <- function(timeout = 10, verbose = TRUE) {
         result$response_time <<- as.numeric(difftime(Sys.time(), start_time, units = "secs"))
 
         if (verbose) {
-          cat(sprintf("\\u2717 FAIL (%.2fs)\n", result$response_time))
+          cat(sprintf("\u2717 FAIL (%.2fs)\n", result$response_time))
           cat(sprintf("     Error: %s\n", result$error_message))
         }
       }

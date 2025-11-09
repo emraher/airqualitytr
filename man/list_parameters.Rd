@@ -13,9 +13,9 @@ A tibble with details on available parameters.
 Retrieves a list of measurement parameters available for querying.
 }
 \examples{
-\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\donttest{
 # Get all available parameters
 params <- list_parameters()
 print(params)
-\dontshow{\}) # examplesIf}
+}
 }

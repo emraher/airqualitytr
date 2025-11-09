@@ -13,7 +13,7 @@ A tibble of station metadata.
 Retrieves a metadata table of available stations from the air quality service.
 }
 \examples{
-\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\donttest{
 # Get all available stations
 stations <- list_stations()
 head(stations)
@@ -22,5 +22,5 @@ head(stations)
 library(dplyr)
 ankara_stations <- stations |>
   filter(grepl("Ankara", city_name, ignore.case = TRUE))
-\dontshow{\}) # examplesIf}
+}
 }

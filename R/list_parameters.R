@@ -4,10 +4,12 @@
 #'
 #' @return A tibble with details on available parameters.
 #' @export
-#' @examplesIf interactive()
+#' @examples
+#' \donttest{
 #' # Get all available parameters
 #' params <- list_parameters()
 #' print(params)
+#' }
 list_parameters <- function() {
   # Define the API endpoint
   url <- "https://sim.csb.gov.tr/STN/STN_Report/StationDataDownloadNewDefaults"

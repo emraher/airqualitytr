@@ -44,7 +44,7 @@ manageable date ranges. The function automatically retrieves station metadata fr
 \code{list_stations()} function and consolidates the chunked downloads into a single tibble.
 }
 \examples{
-\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontrun{
 # Download all available data for a station
 all_data <- download_all_data_for_station(
   station_id = "468478b7-ace5-4bd3-b89a-a9c1c2e53080",
@@ -52,5 +52,5 @@ all_data <- download_all_data_for_station(
   frequency = "hourly",
   chunk_size = "3 months"
 )
-\dontshow{\}) # examplesIf}
+}
 }

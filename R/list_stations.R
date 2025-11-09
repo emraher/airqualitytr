@@ -4,7 +4,8 @@
 #'
 #' @return A tibble of station metadata.
 #' @export
-#' @examplesIf interactive()
+#' @examples
+#' \donttest{
 #' # Get all available stations
 #' stations <- list_stations()
 #' head(stations)
@@ -13,6 +14,7 @@
 #' library(dplyr)
 #' ankara_stations <- stations |>
 #'   filter(grepl("Ankara", city_name, ignore.case = TRUE))
+#' }
 list_stations <- function() {
   # Define the API endpoint
   url <- "https://sim.csb.gov.tr/STN/STN_Report/StationDataDownloadNewDefaults"
@@ -82,8 +84,8 @@ list_stations <- function() {
   # Final cleanup - rename columns and remove unused ones
   StationIds <- StationIds |>
     dplyr::rename("StationId" = "id", "StationName" = "Name") |>
-    dplyr::select(-.data$Station_Title) |>
-    dplyr::select(.data$StationId, tidyselect::everything())
+    dplyr::select(-"Station_Title") |>
+    dplyr::select("StationId", tidyselect::everything())
 
   # Standardize all column names to snake_case
   StationIds <- standardize_column_names(tibble::as_tibble(StationIds))

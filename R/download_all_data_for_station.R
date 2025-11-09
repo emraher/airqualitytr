@@ -23,7 +23,8 @@
 #' @importFrom dplyr bind_rows
 #' @importFrom rlang .data
 #' @export
-#' @examplesIf interactive()
+#' @examples
+#' \dontrun{
 #' # Download all available data for a station
 #' all_data <- download_all_data_for_station(
 #'   station_id = "468478b7-ace5-4bd3-b89a-a9c1c2e53080",
@@ -31,6 +32,7 @@
 #'   frequency = "hourly",
 #'   chunk_size = "3 months"
 #' )
+#' }
 download_all_data_for_station <- function(station_id,
                                           parameters,
                                           frequency = c("hourly", "daily"),
